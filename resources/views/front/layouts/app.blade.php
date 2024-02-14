@@ -6,6 +6,12 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="{{ asset('assets/css/new-page.css') }}" rel="stylesheet" type="text/css">
+    <!-- Add these lines to include Slick slider files -->
+<!-- Add these links in the head section of your HTML -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+
     @if(!empty($metas))
         @if($metas['meta_description'])
             <meta name="description" content="{{$metas['meta_description']}}">
