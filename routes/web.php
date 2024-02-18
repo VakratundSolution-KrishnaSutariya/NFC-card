@@ -54,6 +54,15 @@ use Rap2hpoutre\LaravelLogViewer\LogViewerController;
 //    return (!Auth::check()) ? \redirect(route('login')) : Redirect::to(getDashboardURL());
 //});
 
+Route::get('/shop', function () {
+    return view('front.home.shop');
+});
+
+Route::get('/blog', function () {
+    return view('front.home.blog');
+});
+
+
 Route::get('/', function () {
     return (! Auth::check()) ? \redirect(route('login')) : Redirect::to('/');
 });

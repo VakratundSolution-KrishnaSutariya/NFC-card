@@ -19,7 +19,6 @@ class SetLanguage
     public function handle(Request $request, Closure $next)
     {
         $localeLanguage = Session::get('languageName');
-
         if (! isset($localeLanguage)) {
             if (getLogInUser() != null) {
                 App::setLocale(getLogInUser()->language);

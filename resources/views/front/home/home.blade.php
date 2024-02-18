@@ -59,8 +59,8 @@
                                 $('.banner-slider').slick({
                                     slidesToShow: 1,
                                     slidesToScroll: 1,
-                                    dots: true,
-                                    arrows: true,
+                                    dots: false,
+                                    arrows: false,
                                     responsive: [
                                         {
                                             breakpoint: 768,
@@ -195,7 +195,7 @@
                             <div class="col-lg-3 col-md-6 col-6" data-aos="fade-up" data-aos-duration="700">
                                 <div class="product-card">
                                     <div class="product-card-img">
-                                        <a class="hover-switch" href="collection-left-sidebar.html">
+                                        <a class="hover-switch" href="#">
                                             <img class="secondary-img" src="{{asset('assets/images/1-2.png')}}"
                                                 alt="product-img">
                                             <img class="primary-img" src="{{asset('assets/images/22.png')}}"
@@ -245,7 +245,7 @@
                                             </li>
                                         </ul>
                                         <h3 class="product-card-title">
-                                            <a href="collection-left-sidebar.html">best wood furniture</a>
+                                            <a href="{{ url('new-page') }}">best wood furniture</a>
                                         </h3>
                                         <div class="product-card-price">
                                             <span class="card-price-regular">$1529</span>
@@ -498,9 +498,8 @@
                                     </p>
                                 </div>
                             </div>
-                            <div class="col-lg-6 offset-lg-1 col-md-12 col-12" data-aos="fade-left"
-                            data-aos-duration="700">
-                            <div class="testimonial-container position-relative">
+                            <div class="col-lg-6 offset-lg-1 col-md-12 col-12" data-aos="fade-left" data-aos-duration="700">
+                                <div class="testimonial-container position-relative">
                                     <div class="testimonial-slideshow common-slider">
                                         @foreach($features as $feature)
                                         <div class="testimonial-item">
@@ -512,6 +511,13 @@
                                                             d="M0 28.99L11.7 0H19.5L12.22 28.99H0ZM20.28 28.99L32.11 0H39.91L32.5 28.99H20.28Z"
                                                             fill="#00234D" />
                                                     </svg>
+                                                </div>
+                                                <div class="testimonial-icon-star d-flex align-items-center ms-3">
+                                                    <img src="{{asset('assets/images/star.png')}}" alt="img">
+                                                    <img src="{{asset('assets/images/star.png')}}" alt="img">
+                                                    <img src="{{asset('assets/images/star.png')}}" alt="img">
+                                                    <img src="{{asset('assets/images/star.png')}}" alt="img">
+                                                    <img src="{{asset('assets/images/star.png')}}" alt="img">
                                                 </div>
                                             </div>
                                             <p class="testimonial-review my-4 text_16">
@@ -538,27 +544,23 @@
                                                     </svg>
                                                 </div>
                                                 <div class="testimonial-icon-star d-flex align-items-center ms-3">
-                                                    <img src="assets/img/icon/star.png" alt="img">
-                                                    <img src="assets/img/icon/star.png" alt="img">
-                                                    <img src="assets/img/icon/star.png" alt="img">
-                                                    <img src="assets/img/icon/star.png" alt="img">
-                                                    <img src="assets/img/icon/star.png" alt="img">
+                                                    <img src="{{asset('assets/images/star.png')}}" alt="img">
+                                                    <img src="{{asset('assets/images/star.png')}}" alt="img">
+                                                    <img src="{{asset('assets/images/star.png')}}" alt="img">
+                                                    <img src="{{asset('assets/images/star.png')}}" alt="img">
+                                                    <img src="{{asset('assets/images/star.png')}}" alt="img">
                                                 </div>
                                             </div>
                                             <p class="testimonial-review my-4 text_16">
-                                                “ I am purchasing furniture from Bisum since the last 6 years. I love
-                                                their
-                                                prompt service and so far I have faced no complaints with their
-                                                furniture.”
+                                            {!! $feature->description !!}
                                             </p>
                                             <div class="testimonial-reviewer d-flex align-items-center">
                                                 <div class="reviewer-img">
-                                                    <img src="assets/img/testimonial/john.jpg" alt="img">
+                                                    <img src="{{ $feature->profile_image }}" alt="img" class="feature-image feature-image-card image-object-fit-cover">
                                                 </div>
                                                 <div class="reviewer-info ms-4">
-                                                    <h4 class="reviewer-name heading_18 mb-2 primary-color">Floyd Miles
+                                                    <h4 class="reviewer-name heading_18 mb-2 primary-color">{{ $feature->name }}
                                                     </h4>
-                                                    <p class="reviewer-desig text_14 m-0">Executive, Hypebeast</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -573,37 +575,35 @@
                                                     </svg>
                                                 </div>
                                                 <div class="testimonial-icon-star d-flex align-items-center ms-3">
-                                                    <img src="assets/img/icon/star.png" alt="img">
-                                                    <img src="assets/img/icon/star.png" alt="img">
-                                                    <img src="assets/img/icon/star.png" alt="img">
-                                                    <img src="assets/img/icon/star.png" alt="img">
-                                                    <img src="assets/img/icon/star.png" alt="img">
+                                                    <img src="{{asset('assets/images/star.png')}}" alt="img">
+                                                    <img src="{{asset('assets/images/star.png')}}" alt="img">
+                                                    <img src="{{asset('assets/images/star.png')}}" alt="img">
+                                                    <img src="{{asset('assets/images/star.png')}}" alt="img">
+                                                    <img src="{{asset('assets/images/star.png')}}" alt="img">
                                                 </div>
                                             </div>
                                             <p class="testimonial-review my-4 text_16">
-                                                “ I am purchasing furniture from Bisum since the last 6 years. I love
-                                                their
-                                                prompt service and so far I have faced no complaints with their
-                                                furniture.”
+                                            {!! $feature->description !!}
                                             </p>
                                             <div class="testimonial-reviewer d-flex align-items-center">
                                                 <div class="reviewer-img">
-                                                    <img src="assets/img/testimonial/john.jpg" alt="img">
+                                                    <img src="{{ $feature->profile_image }}" alt="img" class="feature-image feature-image-card image-object-fit-cover">
                                                 </div>
                                                 <div class="reviewer-info ms-4">
-                                                    <h4 class="reviewer-name heading_18 mb-2 primary-color">Floyd Miles
-                                                    </h4>
-                                                    <p class="reviewer-desig text_14 m-0">Executive, Hypebeast</p>
+                                                    <h4 class="reviewer-name heading_18 mb-2 primary-color">{{ $feature->name }}
+                                                        </h4>
+                                                    </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                            @endforeach
+                                    </div>
                                         <script>
                                             $(document).ready(function(){
-                                                $('.banner-slider').slick({
+                                                $('.common-slider').slick({
                                                     slidesToShow: 1,
                                                     slidesToScroll: 1,
-                                                    dots: true,
-                                                    arrows: true,
+                                                    dots: false,
+                                                    arrows: false,
                                                     responsive: [
                                                         {
                                                             breakpoint: 768,
@@ -615,8 +615,6 @@
                                                 });
                                             });
                                         </script>
-                                    </div>
-                                    @endforeach
                                     <div class="activate-arrows show-arrows-always article-arrows arrows-white"></div>
                                 </div>
                             </div>
@@ -626,221 +624,274 @@
             </div>
             <!-- testimonial end -->
 
-    <!-- start pricing section -->
-    <section class="pricing-plan-section padding-t-100px padding-b-100px" id="frontPricingTab">
-        <div class="container">
-            <h2 class="heading text-success text-center margin-b-100px">
-                {{__("auth.choose_a_plan_that's_right_for_you")}}
-            </h2>
-            <div class="pricing-carousel">
-                @foreach($plans as $plan)
-                    <div class="pricing-plan-card card rounded-20">
-                        <div class="card-body text-center">
-                            <h3 class="mb-1 mt-3 ">{{ $plan->name }}</h3>
-                            <label class="fs-18">{{__('messages.plan.no_of_vcards')}}
-                                : {{$plan->no_of_vcards }}</label>
-                            <div class="d-flex justify-content-center my-3">
-                                <h4 class="text-center mb-6 mt-2 pricing">
-                                    <span class="fs-1">{{ $plan->currency->currency_icon }}{{ number_format($plan->price) }}</span>
-                                    @if($plan->frequency == 1)
-                                        <span class="fs-5 fw-light ml-2">/ {{__('messages.plan.monthly')}}</span>
-                                    @elseif($plan->frequency == 2)
-                                        <span class="fs-5 fw-light ml-2">/ {{__('messages.plan.yearly')}}</span>
-                                    @endif
-                                </h4>
+            <!-- single banner start -->
+            <div class="single-banner-section mt-100 overflow-hidden">
+                <div class="position-relative overlay">
+                    <img class="single-banner-img" src="{{asset('assets/images/nfc-banner.jpg')}}" alt="slide-1">
+
+                    <div class="content-absolute content-slide">
+                        <div class="container height-inherit d-flex align-items-center justify-content-center">
+                            <div class="content-box single-banner-content py-4 text-center" data-aos="fade-up"
+                                data-aos-duration="700">
+                                <h2 class="single-banner-heading heading_42 text-white animate__animated animate__fadeInUp"
+                                    data-animation="animate__animated animate__fadeInUp" data-aos="fade-up"
+                                    data-aos-duration="700">
+                                    Created Furniture
+                                </h2>
+                                <p class="single-banner-text text_16 text-white animate__animated animate__fadeInUp"
+                                    data-animation="animate__animated animate__fadeInUp" data-aos="fade-up"
+                                    data-aos-duration="700">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus.
+                                </p>
+                                <a class="btn-primary single-banner-btn animate__animated animate__fadeInUp"
+                                    href="collection-left-sidebar.html"
+                                    data-animation="animate__animated animate__fadeInUp" data-aos="fade-up"
+                                    data-aos-duration="700">
+                                    DISCOVER NOW
+                                </a>
                             </div>
-                            <ul class="pricing-plan-features text-secondary text-start mx-auto fs-6">
-                                @foreach(getPlanFeature($plan) as $feature => $value)
-                                    <li class="{{ $value == 1 ? 'active-check' : 'unactive-check' }}"><span
-                                                class="check-box"><i
-                                            class="fa-solid fa-check"></i></span>{{ __('messages.feature.'.$feature) }}</li>
-                            @endforeach
-                        </ul>
-            {{--(getLoggedInUserRoleId() != getSuperAdminRoleId())--}}
-                            @if(getLoggedInUserRoleId() != getSuperAdminRoleId())
-                        @if(getLogInUser() && getLoggedInUserRoleId() != getSuperAdminRoleId())
-                            <div class="mx-auto">
-                                
-                                @if(!empty(getCurrentSubscription()) && $plan->id == getCurrentSubscription()->plan_id && !getCurrentSubscription()->isExpired())
-                                    @if($plan->price != 0)
-                                        <button type="button"
-                                                class="btn btn-success rounded-pill mx-auto d-block cursor-remove-plan pricing-plan-button-active"
-                                                data-id="{{ $plan->id }}"
-                                                data-turbo="false">
-                                            {{ __('messages.subscription.currently_active') }}</button>
-                                    @else
-                                        <button type="button"
-                                                class="btn btn-info rounded-pill mx-auto d-block cursor-remove-plan" data-turbo="false">
-                                            {{ __('messages.subscription.renew_free_plan') }}
-                                        </button>
-                                    @endif
-                                @else
-                                    @if(!empty(getCurrentSubscription()) && !getCurrentSubscription()->isExpired() && ($plan->price == 0 || $plan->price != 0))
-                                        @if($plan->hasZeroPlan->count() == 0)
-                                            <a href="{{ $plan->price != 0 ? route('choose.payment.type', $plan->id) : 'javascript:void(0)' }}"
-                                               class="btn btn-primary rounded-pill mx-auto {{ $plan->price == 0 ? 'freePayment' : ''}}"
-                                               data-id="{{ $plan->id }}"
-                                               data-plan-price="{{ $plan->price }}"
-                                               data-turbo="false">
-                                                {{ __('messages.subscription.switch_plan') }}</a>
-                                        @else
-                                            <button type="button"
-                                                    class="btn btn-info rounded-pill mx-auto d-block cursor-remove-plan" data-turbo="false">
-                                                {{ __('messages.subscription.renew_free_plan') }}
-                                            </button>
-                                        @endif
-                                    @else
-                                        @if($plan->hasZeroPlan->count() == 0)
-                                            <a href="{{ $plan->price != 0 ? route('choose.payment.type', $plan->id) : 'javascript:void(0)' }}"
-                                               class="btn btn-primary rounded-pill mx-auto  {{ $plan->price == 0 ? 'freePayment' : ''}}"
-                                               data-id="{{ $plan->id }}"
-                                               data-plan-price="{{ $plan->price }}"
-                                               data-turbo="false">
-                                                {{ __('messages.subscription.choose_plan') }}</a>
-                                        @else
-                                            <button type="button" class="btn btn-info rounded-pill mx-auto d-block cursor-remove-plan" data-turbo="false">
-                                                {{ __('messages.subscription.renew_free_plan') }}
-                                            </button>
-                                        @endif
-                                    @endif
-                                @endif
-                            </div>
-                        @else
-                            <div class="mx-auto">
-                                @if($plan->hasZeroPlan->count() == 0)
-                                    <a href="{{ $plan->price != 0 ? route('choose.payment.type', $plan->id) : 'javascript:void(0)' }}"
-                                       class="btn btn-primary rounded-pill mx-auto  {{ $plan->price == 0 ? 'freePayment' : ''}}"
-                                       data-id="{{ $plan->id }}"
-                                       data-plan-price="{{ $plan->price }}"
-                                       data-turbo="false">
-                                        {{ __('messages.subscription.choose_plan') }}</a>
-                                @else
-                                    <button type="button" class="btn btn-info rounded-pill mx-auto d-block cursor-remove-plan" data-turbo="false">
-                                        {{ __('messages.subscription.renew_free_plan') }}
-                                    </button>
-                                @endif
-                            </div>
-                        @endif
-                                @endif
-                    </div>
-                </div>
-                @endforeach
-            </div>
-        </div>
-    </section>
-    <!-- end pricing section -->
-
-<!--trending products start-->
-
-
-<!--trending products start-->
-
-
-
-    <!-- start testimonial section -->
-    @if(!$testimonials->isEmpty())
-    <section class="testimonial-section padding-t-100px">
-        <div class="container">
-            <h2 class="heading text-success text-center margin-b-80px">
-                {{__('auth.stories_from_our_customers')}}
-            </h2>
-            <div class="testimonial-section__testimonial-block mx-auto">
-                <div class="testimonial-carousel">
-                    @foreach($testimonials as $testimonial)
-                    <div class="testimonial-section__testimonial-card border rounded-20 position-relative {{$loop->iteration == 1 ? 'active' : ''}}">
-                        <div class="quotation-mark">
-                            <img src="{{ asset('front/images/quotation.png') }}" alt="Quotation Mark">
-                        </div>
-                        <p class="text-gray-100 fs-18 mb-4 pb-2">
-                            {!! $testimonial->description !!}
-                        </p>
-                        <div class="d-flex profile-box align-items-center">
-                            <img src="{{ $testimonial->testimonial_url }}" alt="profile" class="profile-img rounded-circle img-fluid image-object-fit-cover">
-                            <span class="ms-3">
-                                <h3 class="profile-name mb-md-2 mb-1">{{ $testimonial->name }}</h3>
-                            </span>
-                        </div>
-                    </div>
-                    @endforeach
-                </div>
-            </div>
-        </div>
-    </section>
-    @endif
-    <!-- end testimonial section -->
-
-    <!-- start contact section -->
-    <section class="contact-section padding-t-100px padding-b-100px" id="frontContactTab">
-        <h2 class="heading text-success text-center margin-b-80px">
-            {{__('messages.contact_us.contact')}}
-        </h2>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="contact-info">
-                        <div class="d-flex align-items-center contact-info__block">
-                            <div class="contact-info__contact-icon text-white fs-2 d-flex align-items-center justify-content-center">
-                                <i class="fa-solid fa-envelope"></i>
-                            </div>
-                            <a href="mailto:{{ $setting['email'] }}"
-                               class="text-decoration-none text-secondary contact-info__contact-label">{{ $setting['email'] }}</a>
-                        </div>
-                        <div class="d-flex align-items-center contact-info__block">
-                            <div class="contact-info__contact-icon text-white fs-2 d-flex align-items-center justify-content-center">
-                                <i class="fa-solid fa-phone"></i>
-                            </div>
-                            <a href=" tel:{{ $setting['phone'] }}"
-                               class="text-decoration-none text-secondary contact-info__contact-label">{{"+".$setting['prefix_code']." ".$setting['phone'] }}</a>
-                        </div>
-                        <div class="d-flex align-items-center contact-info__block">
-                            <div class="contact-info__contact-icon text-white fs-2 d-flex align-items-center justify-content-center">
-                                <i class="fa-solid fa-location-dot"></i>
-                            </div>
-                            <p class="text-secondary contact-info__contact-label mb-0">
-                                {{ $setting['address'] }}
-                            </p>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <form class="contact-form" id="myForm">
-                        @csrf
-                        <div id="contactError" class="alert alert-danger d-none"></div>
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="contact-form__input-block">
-                                    <input name="name" id="name" type="text" class="form-control"
-                                           placeholder="{{ __('messages.front.enter_your_name') }}*" required>
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="contact-form__input-block">
-                                    <input name="email" id="email" type="email" class="form-control"
-                                           placeholder="{{ __('messages.front.enter_your_email') }}*" required>
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="contact-form__input-block">
-                                    <input name="subject" id="subject" type="text" class="form-control"
-                                           placeholder="{{ __('messages.common.subject') }}*" required>
-                                </div>
-                            </div>
-                            <div class="col-lg-12">
-                                <div class="contact-form__input-block">
-                                    <textarea name="message" id="message" rows="4" class="form-control form-textarea"
-                                              placeholder="{{ __('messages.front.enter_your_message') }}*" required></textarea>
-                                </div>
-                            </div>
-                            <div class="col-lg-12 text-end">
-                                <input type="submit" id="submit" name="send" class="btn btn-primary"
-                                       value="{{ __('messages.contact_us.send_message') }}">
-                            </div>
+            </div>
+            <!-- single banner end -->
+
+            <!-- latest blog start -->
+            <div class="latest-blog-section mt-100 overflow-hidden home-section">
+                <div class="latest-blog-inner">
+                    <div class="container">
+                        <div class="section-header text-center">
+                            <h2 class="section-heading primary-color">Latest blogs</h2>
                         </div>
-                    </form>
+                        <div class="article-card-container position-relative">
+                            <div class="common-slider" data-slick='{
+                                "slidesToShow": 3, 
+                                "slidesToScroll": 1,
+                                "dots": false,
+                                "arrows": true,
+                                "responsive": [
+                                  {
+                                    "breakpoint": 1281,
+                                    "settings": {
+                                      "slidesToShow": 2
+                                    }
+                                  },
+                                  {
+                                    "breakpoint": 602,
+                                    "settings": {
+                                      "slidesToShow": 1
+                                    }
+                                  }
+                                ]
+                            }'>
+
+                                <div class="article-slick-item" data-aos="fade-up" data-aos-duration="700">
+                                    <div class="article-card bg-transparent p-0 shadow-none">
+                                        <a class="article-card-img-wrapper" href="article.html">
+                                            <img src="{{asset('assets/images/card-2.jpg')}}" alt="img"
+                                                class="article-card-img rounded">
+
+                                            <span class="article-tag article-tag-absolute rounded">Decor</span>
+                                        </a>
+                                        <p class="article-card-published text_12 d-flex align-items-center">
+                                            <span class="article-date d-flex align-items-center">
+                                                <span class="icon-publish">
+                                                    <svg width="17" height="18" viewBox="0 0 17 18" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M3.46875 0.875V1.59375H0.59375V17.4063H16.4063V1.59375H13.5313V0.875H12.0938V1.59375H4.90625V0.875H3.46875ZM2.03125 3.03125H3.46875V3.75H4.90625V3.03125H12.0938V3.75H13.5313V3.03125H14.9688V4.46875H2.03125V3.03125ZM2.03125 5.90625H14.9688V15.9688H2.03125V5.90625ZM6.34375 7.34375V8.78125H7.78125V7.34375H6.34375ZM9.21875 7.34375V8.78125H10.6563V7.34375H9.21875ZM12.0938 7.34375V8.78125H13.5313V7.34375H12.0938ZM3.46875 10.2188V11.6563H4.90625V10.2188H3.46875ZM6.34375 10.2188V11.6563H7.78125V10.2188H6.34375ZM9.21875 10.2188V11.6563H10.6563V10.2188H9.21875ZM12.0938 10.2188V11.6563H13.5313V10.2188H12.0938ZM3.46875 13.0938V14.5313H4.90625V13.0938H3.46875ZM6.34375 13.0938V14.5313H7.78125V13.0938H6.34375ZM9.21875 13.0938V14.5313H10.6563V13.0938H9.21875Z"
+                                                            fill="#00234D" />
+                                                    </svg>
+                                                </span>
+                                                <span class="ms-2">30 December, 2022</span>
+                                            </span>
+                                            <span class="article-author d-flex align-items-center ms-4">
+                                                <span class="icon-author"><svg width="15" height="17"
+                                                        viewBox="0 0 15 17" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.5 0.59375C4.72888 0.59375 2.46875 2.85388 2.46875 5.625C2.46875 7.3573 3.35315 8.89587 4.69238 9.80274C2.12903 10.9033 0.3125 13.447 0.3125 16.4063H1.75C1.75 13.2224 4.31616 10.6563 7.5 10.6563C10.6838 10.6563 13.25 13.2224 13.25 16.4063H14.6875C14.6875 13.447 12.871 10.9033 10.3076 9.80274C11.6469 8.89587 12.5313 7.3573 12.5313 5.625C12.5313 2.85388 10.2711 0.59375 7.5 0.59375ZM7.5 2.03125C9.49341 2.03125 11.0938 3.63159 11.0938 5.625C11.0938 7.61841 9.49341 9.21875 7.5 9.21875C5.50659 9.21875 3.90625 7.61841 3.90625 5.625C3.90625 3.63159 5.50659 2.03125 7.5 2.03125Z"
+                                                            fill="#00234D" />
+                                                    </svg>
+                                                </span>
+                                                <span class="ms-2">Lara Joe</span>
+                                            </span>
+                                        </p>
+                                        <h2 class="article-card-heading heading_18">
+                                            <a class="heading_18" href="article.html">
+                                                Pure is the most furniture.
+                                            </a>
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="article-slick-item" data-aos="fade-up" data-aos-duration="700">
+                                    <div class="article-card bg-transparent p-0 shadow-none">
+                                        <a class="article-card-img-wrapper" href="article.html">
+                                            <img src="{{asset('assets/images/card-2.jpg')}}" alt="img"
+                                                class="article-card-img rounded">
+                                            <span class="article-tag article-tag-absolute rounded">Furniture</span>
+                                        </a>
+                                        <p class="article-card-published text_12 d-flex align-items-center">
+                                            <span class="article-date d-flex align-items-center">
+                                                <span class="icon-publish">
+                                                    <svg width="17" height="18" viewBox="0 0 17 18" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M3.46875 0.875V1.59375H0.59375V17.4063H16.4063V1.59375H13.5313V0.875H12.0938V1.59375H4.90625V0.875H3.46875ZM2.03125 3.03125H3.46875V3.75H4.90625V3.03125H12.0938V3.75H13.5313V3.03125H14.9688V4.46875H2.03125V3.03125ZM2.03125 5.90625H14.9688V15.9688H2.03125V5.90625ZM6.34375 7.34375V8.78125H7.78125V7.34375H6.34375ZM9.21875 7.34375V8.78125H10.6563V7.34375H9.21875ZM12.0938 7.34375V8.78125H13.5313V7.34375H12.0938ZM3.46875 10.2188V11.6563H4.90625V10.2188H3.46875ZM6.34375 10.2188V11.6563H7.78125V10.2188H6.34375ZM9.21875 10.2188V11.6563H10.6563V10.2188H9.21875ZM12.0938 10.2188V11.6563H13.5313V10.2188H12.0938ZM3.46875 13.0938V14.5313H4.90625V13.0938H3.46875ZM6.34375 13.0938V14.5313H7.78125V13.0938H6.34375ZM9.21875 13.0938V14.5313H10.6563V13.0938H9.21875Z"
+                                                            fill="#00234D" />
+                                                    </svg>
+                                                </span>
+                                                <span class="ms-2">30 December, 2022</span>
+                                            </span>
+                                            <span class="article-author d-flex align-items-center ms-4">
+                                                <span class="icon-author"><svg width="15" height="17"
+                                                        viewBox="0 0 15 17" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.5 0.59375C4.72888 0.59375 2.46875 2.85388 2.46875 5.625C2.46875 7.3573 3.35315 8.89587 4.69238 9.80274C2.12903 10.9033 0.3125 13.447 0.3125 16.4063H1.75C1.75 13.2224 4.31616 10.6563 7.5 10.6563C10.6838 10.6563 13.25 13.2224 13.25 16.4063H14.6875C14.6875 13.447 12.871 10.9033 10.3076 9.80274C11.6469 8.89587 12.5313 7.3573 12.5313 5.625C12.5313 2.85388 10.2711 0.59375 7.5 0.59375ZM7.5 2.03125C9.49341 2.03125 11.0938 3.63159 11.0938 5.625C11.0938 7.61841 9.49341 9.21875 7.5 9.21875C5.50659 9.21875 3.90625 7.61841 3.90625 5.625C3.90625 3.63159 5.50659 2.03125 7.5 2.03125Z"
+                                                            fill="#00234D" />
+                                                    </svg>
+                                                </span>
+                                                <span class="ms-2">Lara Joe</span>
+                                            </span>
+                                        </p>
+                                        <h2 class="article-card-heading heading_18">
+                                            <a class="heading_18" href="article.html">
+                                                Minimalism in your room.
+                                            </a>
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="article-slick-item" data-aos="fade-up" data-aos-duration="700">
+                                    <div class="article-card bg-transparent p-0 shadow-none">
+                                        <a class="article-card-img-wrapper" href="article.html">
+                                            <img src="{{asset('assets/images/card-2.jpg')}}" alt="img"
+                                                class="article-card-img rounded">
+                                            <span class="article-tag article-tag-absolute rounded">Kitchen</span>
+                                        </a>
+                                        <p class="article-card-published text_12 d-flex align-items-center">
+                                            <span class="article-date d-flex align-items-center">
+                                                <span class="icon-publish">
+                                                    <svg width="17" height="18" viewBox="0 0 17 18" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M3.46875 0.875V1.59375H0.59375V17.4063H16.4063V1.59375H13.5313V0.875H12.0938V1.59375H4.90625V0.875H3.46875ZM2.03125 3.03125H3.46875V3.75H4.90625V3.03125H12.0938V3.75H13.5313V3.03125H14.9688V4.46875H2.03125V3.03125ZM2.03125 5.90625H14.9688V15.9688H2.03125V5.90625ZM6.34375 7.34375V8.78125H7.78125V7.34375H6.34375ZM9.21875 7.34375V8.78125H10.6563V7.34375H9.21875ZM12.0938 7.34375V8.78125H13.5313V7.34375H12.0938ZM3.46875 10.2188V11.6563H4.90625V10.2188H3.46875ZM6.34375 10.2188V11.6563H7.78125V10.2188H6.34375ZM9.21875 10.2188V11.6563H10.6563V10.2188H9.21875ZM12.0938 10.2188V11.6563H13.5313V10.2188H12.0938ZM3.46875 13.0938V14.5313H4.90625V13.0938H3.46875ZM6.34375 13.0938V14.5313H7.78125V13.0938H6.34375ZM9.21875 13.0938V14.5313H10.6563V13.0938H9.21875Z"
+                                                            fill="#00234D" />
+                                                    </svg>
+                                                </span>
+                                                <span class="ms-2">30 December, 2022</span>
+                                            </span>
+                                            <span class="article-author d-flex align-items-center ms-4">
+                                                <span class="icon-author"><svg width="15" height="17"
+                                                        viewBox="0 0 15 17" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.5 0.59375C4.72888 0.59375 2.46875 2.85388 2.46875 5.625C2.46875 7.3573 3.35315 8.89587 4.69238 9.80274C2.12903 10.9033 0.3125 13.447 0.3125 16.4063H1.75C1.75 13.2224 4.31616 10.6563 7.5 10.6563C10.6838 10.6563 13.25 13.2224 13.25 16.4063H14.6875C14.6875 13.447 12.871 10.9033 10.3076 9.80274C11.6469 8.89587 12.5313 7.3573 12.5313 5.625C12.5313 2.85388 10.2711 0.59375 7.5 0.59375ZM7.5 2.03125C9.49341 2.03125 11.0938 3.63159 11.0938 5.625C11.0938 7.61841 9.49341 9.21875 7.5 9.21875C5.50659 9.21875 3.90625 7.61841 3.90625 5.625C3.90625 3.63159 5.50659 2.03125 7.5 2.03125Z"
+                                                            fill="#00234D" />
+                                                    </svg>
+                                                </span>
+                                                <span class="ms-2">Lara Joe</span>
+                                            </span>
+                                        </p>
+                                        <h2 class="article-card-heading heading_18">
+                                            <a class="heading_18" href="article.html">
+                                                Build up your kitchen.
+                                            </a>
+                                        </h2>
+                                    </div>
+                                </div>
+                                <div class="article-slick-item" data-aos="fade-up" data-aos-duration="700">
+                                    <div class="article-card bg-transparent p-0 shadow-none">
+                                        <a class="article-card-img-wrapper" href="article.html">
+                                            <img src="{{asset('assets/images/card-2.jpg')}}" alt="img"
+                                                class="article-card-img rounded">
+                                            <span class="article-tag article-tag-absolute rounded">Furniture</span>
+                                        </a>
+                                        <p class="article-card-published text_12 d-flex align-items-center">
+                                            <span class="article-date d-flex align-items-center">
+                                                <span class="icon-publish">
+                                                    <svg width="17" height="18" viewBox="0 0 17 18" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M3.46875 0.875V1.59375H0.59375V17.4063H16.4063V1.59375H13.5313V0.875H12.0938V1.59375H4.90625V0.875H3.46875ZM2.03125 3.03125H3.46875V3.75H4.90625V3.03125H12.0938V3.75H13.5313V3.03125H14.9688V4.46875H2.03125V3.03125ZM2.03125 5.90625H14.9688V15.9688H2.03125V5.90625ZM6.34375 7.34375V8.78125H7.78125V7.34375H6.34375ZM9.21875 7.34375V8.78125H10.6563V7.34375H9.21875ZM12.0938 7.34375V8.78125H13.5313V7.34375H12.0938ZM3.46875 10.2188V11.6563H4.90625V10.2188H3.46875ZM6.34375 10.2188V11.6563H7.78125V10.2188H6.34375ZM9.21875 10.2188V11.6563H10.6563V10.2188H9.21875ZM12.0938 10.2188V11.6563H13.5313V10.2188H12.0938ZM3.46875 13.0938V14.5313H4.90625V13.0938H3.46875ZM6.34375 13.0938V14.5313H7.78125V13.0938H6.34375ZM9.21875 13.0938V14.5313H10.6563V13.0938H9.21875Z"
+                                                            fill="#00234D" />
+                                                    </svg>
+                                                </span>
+                                                <span class="ms-2">30 December, 2022</span>
+                                            </span>
+                                            <span class="article-author d-flex align-items-center ms-4">
+                                                <span class="icon-author"><svg width="15" height="17"
+                                                        viewBox="0 0 15 17" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M7.5 0.59375C4.72888 0.59375 2.46875 2.85388 2.46875 5.625C2.46875 7.3573 3.35315 8.89587 4.69238 9.80274C2.12903 10.9033 0.3125 13.447 0.3125 16.4063H1.75C1.75 13.2224 4.31616 10.6563 7.5 10.6563C10.6838 10.6563 13.25 13.2224 13.25 16.4063H14.6875C14.6875 13.447 12.871 10.9033 10.3076 9.80274C11.6469 8.89587 12.5313 7.3573 12.5313 5.625C12.5313 2.85388 10.2711 0.59375 7.5 0.59375ZM7.5 2.03125C9.49341 2.03125 11.0938 3.63159 11.0938 5.625C11.0938 7.61841 9.49341 9.21875 7.5 9.21875C5.50659 9.21875 3.90625 7.61841 3.90625 5.625C3.90625 3.63159 5.50659 2.03125 7.5 2.03125Z"
+                                                            fill="#00234D" />
+                                                    </svg>
+                                                </span>
+                                                <span class="ms-2">Lara Joe</span>
+                                            </span>
+                                        </p>
+                                        <h2 class="article-card-heading heading_18">
+                                            <a class="heading_18" href="article.html">
+                                                Minimalism in your room.
+                                            </a>
+                                        </h2>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="activate-arrows show-arrows-always article-arrows arrows-white"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- end contact section -->
+            <!-- latest blog end -->
 
+            <!-- brand logo start -->
+            <div class="brand-logo-section mt-100">
+                <div class="brand-logo-inner">
+                    <div class="container">
+                        <div class="brand-logo-container overflow-hidden">
+                            <div class="scroll-horizontal row align-items-center flex-nowrap">
+                                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6" data-aos="fade-up"
+                                    data-aos-duration="700">
+                                    <a href="index.html" class="brand-logo d-flex align-items-center justify-content-center">
+                                        <img src="{{('assets/images/infyom-logo.png')}}" alt="img">
+                                    </a>
+                                </div>
+                                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6" data-aos="fade-up"
+                                    data-aos-duration="700">
+                                    <a href="index.html" class="brand-logo d-flex align-items-center justify-content-center">
+                                        <img src="{{('assets/images/infyom-logo.png')}}" alt="img">
+                                    </a>
+                                </div>
+                                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6" data-aos="fade-up"
+                                    data-aos-duration="700">
+                                    <a href="index.html" class="brand-logo d-flex align-items-center justify-content-center">
+                                        <img src="{{('assets/images/infyom-logo.png')}}" alt="img">
+                                    </a>
+                                </div>
+                                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6" data-aos="fade-up"
+                                    data-aos-duration="700">
+                                    <a href="index.html" class="brand-logo d-flex align-items-center justify-content-center">
+                                        <img src="{{('assets/images/infyom-logo.png')}}" alt="img">
+                                    </a>
+                                </div>
+                                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6" data-aos="fade-up"
+                                    data-aos-duration="700">
+                                    <a href="index.html" class="brand-logo d-flex align-items-center justify-content-center">
+                                        <img src="{{('assets/images/infyom-logo.png')}}" alt="img">
+                                    </a>
+                                </div>
+                                <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6 col-6" data-aos="fade-up"
+                                    data-aos-duration="700">
+                                    <a href="index.html" class="brand-logo d-flex align-items-center justify-content-center">
+                                        <img src="{{('assets/images/infyom-logo.png')}}" alt="img">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- brand logo end -->
 @endsection

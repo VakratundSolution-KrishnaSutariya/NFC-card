@@ -195,6 +195,8 @@ mix.js('resources/assets/js/custom/helpers.js',
         'public/assets/js/custom/custom.js').
     js('resources/assets/js/home_page/home_page.js',
         'public/assets/js/home_page/home_page.js').
+    js('resources/assets/js/home_page/other_new.js',
+        'public/assets/js/home_page/other_new.js').
     version()
 
 mix.sass('resources/assets/css/front-main.scss',
@@ -212,6 +214,7 @@ mix.js([
     'resources/assets/js/custom/helpers.js',
    'resources/assets/js/custom/custom.js',
     'resources/assets/js/home_page/home_page.js',
+    'resources/assets/js/home_page/other_new.js',   
     'resources/assets/js/auth/auth.js',
     'resources/assets/js/home/contact.js'
 ],'public/assets/js/front-pages.js').version()

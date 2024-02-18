@@ -54,7 +54,7 @@ function getLanguages()
  */
 function getAppName()
 {
-    $record = getSuperAdminSettingValue('app_name');
+    $record =  ('app_name');
 
     return (! empty($record)) ? $record : config('app.name');
 }

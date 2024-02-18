@@ -35,6 +35,15 @@ use Symfony\Component\HttpKernel\Exception\UnprocessableEntityHttpException;
 
 class UserController extends AppBaseController
 {
+
+function change_user(){
+    return view('users.index');
+}
+
+
+
+
+
     /**
      * @var UserRepository
      */
