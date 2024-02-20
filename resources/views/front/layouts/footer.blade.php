@@ -55,3 +55,5 @@
             </div>
         </div>
     </footer>
+<!-- Slick Slider JavaScript -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js"></script>

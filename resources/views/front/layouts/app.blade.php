@@ -7,9 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="{{ asset('assets/css/new-page.css') }}" rel="stylesheet" type="text/css">
     <!-- Add these lines to include Slick slider files -->
-<!-- Add these links in the head section of your HTML -->
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.css"/>
+
 
 
     @if(!empty($metas))
@@ -43,8 +42,31 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/css/third-party.css') }}">
     <link href="{{ asset('assets/css/front-custom.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('assets/css/front/front-custom.css') }}" rel="stylesheet" type="text/css">
+
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Slick Slider v1.8.1 -->
+    <!-- Slick Slider CSS -->
+<!-- <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"/> -->
+
+    <!-- Line Awesome v1.3.0 -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"> -->
+    <!-- AOS Animation v2.3.1 -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" rel="stylesheet"> -->
+    <!-- Animate.min.css v4.1.1 -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet"> -->
+    <!-- Fancybox.min.css v3.2.11 -->
+    <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css" rel="stylesheet"> -->
+   
+
     <script src="{{ mix('assets/js/front-third-party.js') }}"></script>
     <script src="{{ asset('assets/js/messages.js') }}"></script>
+    <!-- new js -->
+    <script src="{{ asset('assets/js/home_page/other_new.js') }}"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js"></script>
+
     @php  $langSession = Session::get('languageName');
            $frontLanguage = !isset($langSession) ? getSuperAdminSettingValue('default_language') : $langSession;
     @endphp

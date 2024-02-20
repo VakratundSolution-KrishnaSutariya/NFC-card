@@ -62,6 +62,18 @@ Route::get('/blog', function () {
     return view('front.home.blog');
 });
 
+Route::get('/contact', function () {
+    return view('front.home.contact');
+});
+
+Route::get('/my-account', function () {
+    return view('front.home.my-account');
+});
+
+Route::get('/product', function () {
+    return view('front.home.product');
+});
+
 
 Route::get('/', function () {
     return (! Auth::check()) ? \redirect(route('login')) : Redirect::to('/');
