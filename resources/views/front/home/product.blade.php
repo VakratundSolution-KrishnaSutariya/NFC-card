@@ -5,9 +5,6 @@
 @section('content')   
 
 
-        <!-- main content start -->
-
-
              <!-- breadcrumb start -->
              <div class="breadcrumb">
             <div class="container">
@@ -38,9 +35,12 @@
                 </ul>
             </div>
         </div>
-        <!-- breadcrumb end -->
 
-        <main id="MainContent" class="content-for-layout">
+             <!-- breadcrumb end -->
+            
+         <!-- main content start -->
+
+         <main id="MainContent" class="content-for-layout">
             <div class="product-page mt-100">
                 <div class="container">
                     <div class="row">
@@ -51,112 +51,96 @@
                                         "slidesToShow": 1, 
                                         "slidesToScroll": 1,
                                         "dots": false,
-                                        "arrows": true,
+                                        "arrows": false,
                                         "asNavFor": ".img-thumb-slider"
                                     }'>
                                         <div class="img-large-wrapper">
-                                            <a href="{{asset('assets/images/dummy-2.jpg')}}" data-fancybox="gallery">
-                                                <img src="{{asset('assets/images/dummy-2.jpg')}}" alt="img">
+                                            <a href="assets/img/products/bags/39.jpg" data-fancybox="gallery">
+                                                <img src="{{asset('assets/images/39.jpg')}}" alt="img">
                                             </a>
                                         </div>
                                         <div class="img-large-wrapper">
-                                            <a href="{{asset('assets/images/dummy-2.jpg')}}" data-fancybox="gallery">
-                                                <img src="{{asset('assets/images/dummy-2.jpg')}}" alt="img">
+                                            <a href="assets/img/products/bags/38.jpg" data-fancybox="gallery">
+                                                <img src="{{asset('assets/images/39.jpg')}}" alt="img">
                                             </a>
                                         </div>
                                         <div class="img-large-wrapper">
-                                            <a href="{{asset('assets/images/dummy-2.jpg')}}" data-fancybox="gallery">
-                                                <img src="{{asset('assets/images/dummy-2.jpg')}}" alt="img">
+                                            <a href="assets/img/products/bags/37.jpg" data-fancybox="gallery">
+                                                <img src="{{asset('assets/images/39.jpg')}}" alt="img">
                                             </a>
                                         </div>
                                         <div class="img-large-wrapper">
-                                            <a href="{{asset('assets/images/dummy-2.jpg')}}" data-fancybox="gallery">
-                                                <img src="{{asset('assets/images/dummy-2.jpg')}}" alt="img">
+                                            <a href="assets/img/products/bags/36.jpg" data-fancybox="gallery">
+                                                <img src="{{asset('assets/images/39.jpg')}}" alt="img">
                                             </a>
                                         </div>
                                         <div class="img-large-wrapper">
-                                            <a href="{{asset('assets/images/dummy-2.jpg')}}" data-fancybox="gallery">
-                                                <img src="{{asset('assets/images/dummy-2.jpg')}}" alt="img">
+                                            <a href="assets/img/products/bags/34.jpg" data-fancybox="gallery">
+                                                <img src="{{asset('assets/images/39.jpg')}}" alt="img">
                                             </a>
                                         </div>
                                         <div class="img-large-wrapper">
-                                            <a href="{{asset('assets/images/dummy-2.jpg')}}" data-fancybox="gallery">
-                                                <img src="{{asset('assets/images/dummy-2.jpg')}}" alt="img">
+                                            <a href="assets/img/products/bags/30.jpg" data-fancybox="gallery">
+                                                <img src="{{asset('assets/images/39.jpg')}}" alt="img">
                                             </a>
                                         </div>
                                         <div class="img-large-wrapper">
-                                            <a href="{{asset('assets/images/dummy-2.jpg')}}" data-fancybox="gallery">
-                                                <img src="{{asset('assets/images/dummy-2.jpg')}}" alt="img">
+                                            <a href="assets/img/products/bags/32.jpg" data-fancybox="gallery">
+                                                <img src="{{asset('assets/images/39.jpg')}}" alt="img">
                                             </a>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="product-img-thumb">
-                                    <div class="img-thumb-slider common-slider slick-carousel" data-vertical-slider="true" data-slick='{
+                                    <div class="img-thumb-slider common-slider" data-vertical-slider="true" data-slick='{
+                                        "slidesToShow": 5, 
+                                        "slidesToScroll": 1,
+                                        "dots": false,
+                                        "arrows": true,
+                                        "infinite": false,
+                                        "speed": 300,
+                                        "cssEase": "ease",
+                                        "focusOnSelect": true,
+                                        "swipeToSlide": true,
                                         "asNavFor": ".img-large-slider"
                                     }'>
-                                        <div class="slide-content">
+                                        <div>
                                             <div class="img-thumb-wrapper">
-                                                <img src="{{asset('assets/images/dummy-2.jpg')}}" alt="img">
+                                                <img src="{{asset('assets/images/39.jpg')}}" alt="img">
                                             </div>
                                         </div>
-                                        <div class="slide-content">
+                                        <div>
                                             <div class="img-thumb-wrapper">
-                                                <img src="{{asset('assets/images/dummy-2.jpg')}}" alt="img">
+                                                <img src="{{asset('assets/images/39.jpg')}}" alt="img">
                                             </div>
                                         </div>
-                                        <div class="slide-content">
+                                        <div>
                                             <div class="img-thumb-wrapper">
-                                                <img src="{{asset('assets/images/dummy-2.jpg')}}" alt="img">
+                                                <img src="{{asset('assets/images/39.jpg')}}" alt="img">
                                             </div>
                                         </div>
-                                        <div class="slide-content">
+                                        <div>
                                             <div class="img-thumb-wrapper">
-                                                <img src="{{asset('assets/images/dummy-2.jpg')}}" alt="img">
+                                                <img src="{{asset('assets/images/39.jpg')}}" alt="img">
                                             </div>
                                         </div>
-                                        <div class="slide-content">
+                                        <div>
                                             <div class="img-thumb-wrapper">
-                                                <img src="{{asset('assets/images/dummy-2.jpg')}}" alt="img">
+                                                <img src="{{asset('assets/images/39.jpg')}}" alt="img">
                                             </div>
                                         </div>
-                                        <div class="slide-content">
+                                        <div>
                                             <div class="img-thumb-wrapper">
-                                                <img src="{{asset('assets/images/dummy-2.jpg')}}" alt="img">
+                                                <img src="{{asset('assets/images/39.jpg')}}" alt="img">
                                             </div>
                                         </div>
-                                        <div class="slide-content">
+                                        <div>
                                             <div class="img-thumb-wrapper">
-                                                <img src="{{asset('assets/images/dummy-2.jpg')}}" alt="img">
+                                                <img src="{{asset('assets/images/39.jpg')}}" alt="img">
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="activate-arrows show-arrows-always arrows-black d-lg-flex justify-content-between mt-3">
-                                    <!-- <span class="arrow-slider arrow-prev slick-arrow slick-true" aria-disabled="true" style="">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="#FEFEFE" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="icon-arrow-left"><polyline points="15 18 9 12 15 6"></polyline></svg>
-                                    </span>
-                                    <span class="arrow-slider arrow-next slick-arrow" aria-disabled="false" style="">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 24 24" fill="none" stroke="#FEFEFE" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round" class="icon-arrow-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                                    </span> -->
-                                    </div>
-                                    <script>
-                                            $().ready(function(){
-                                            $('.slick-carousel').slick({
-                                                arrows: true,
-                                                // rows: 2,
-                                                vertical: true,
-                                                verticalSwiping: true,
-                                                slidesPerRow: 3,
-                                                centerPadding: "0px",
-                                                dots: false,
-                                                slidesToShow: 4,
-                                                swipeToSlide: true,
-                                                focusOnSelect: true,
-                                                // touchThreshold: 500,
-                                                infinite: false
-                                            });
-                                            });
-                                    </script>
+                                    <div class="activate-arrows show-arrows-always arrows-white d-none d-lg-flex justify-content-between mt-3"></div>
                                 </div>
                             </div>
                         </div>
@@ -253,9 +237,9 @@
 
                                 <div class="misc d-flex align-items-end justify-content-between mt-4">
                                     <div class="quantity d-flex align-items-center justify-content-between">
-                                        <button class="qty-btn dec-qty"><img src="assets/img/icon/minus.svg" alt="minus"></button>
+                                        <button class="qty-btn dec-qty"><img src="{{asset('assets/images/plus.svg')}}" alt="minus"></button>
                                         <input class="qty-input" type="number" name="qty" value="1" min="0">
-                                        <button class="qty-btn inc-qty"><img src="assets/img/icon/plus.svg" alt="plus"></button>
+                                        <button class="qty-btn inc-qty"><img src="{{asset('assets/images/plus.svg')}}" alt="plus"></button>
                                     </div>
                                     <div class="message-popup d-flex align-items-center">
                                         <span class="message-popup-icon">
@@ -455,7 +439,7 @@
                                 </div>
                                 <div class="col-lg-5 col-md-12 col-12">
                                     <div class="desc-img">
-                                        <img src="assets/img/product.jpg" alt="img">
+                                        <img src="{{asset('assets/images/39.jpg')}}" alt="img">
                                     </div>
                                 </div>
                                 <div class="col-lg-12 col-md-12 col-12">
@@ -569,9 +553,9 @@
                         <div class="product-card">
                             <div class="product-card-img">
                                 <a class="hover-switch" href="collection-left-sidebar.html">
-                                    <img class="secondary-img" src="{{asset('assets/images/dummy-3.jpg')}}"
+                                    <img class="secondary-img" src="{{asset('assets/images/39.jpg')}}"
                                         alt="product-img">
-                                    <img class="primary-img" src="{{asset('assets/images/dummy-3.jpg')}}"
+                                    <img class="primary-img" src="{{asset('assets/images/39.jpg')}}"
                                         alt="product-img">
                                 </a>
 
@@ -604,9 +588,9 @@
                         <div class="product-card">
                             <div class="product-card-img">
                                 <a class="hover-switch" href="collection-left-sidebar.html">
-                                    <img class="secondary-img" src="{{asset('assets/images/dummy-3.jpg')}}"
+                                    <img class="secondary-img" src="{{asset('assets/images/39.jpg')}}"
                                         alt="product-img">
-                                    <img class="primary-img" src="{{asset('assets/images/dummy-3.jpg')}}"
+                                    <img class="primary-img" src="{{asset('assets/images/39.jpg')}}"
                                         alt="product-img">
                                 </a>
 
@@ -639,9 +623,9 @@
                         <div class="product-card">
                             <div class="product-card-img">
                                 <a class="hover-switch" href="collection-left-sidebar.html">
-                                    <img class="secondary-img" src="{{asset('assets/images/dummy-3.jpg')}}"
+                                    <img class="secondary-img" src="{{asset('assets/images/39.jpg')}}"
                                         alt="product-img">
-                                    <img class="primary-img" src="{{asset('assets/images/dummy-3.jpg')}}"
+                                    <img class="primary-img" src="{{asset('assets/images/39.jpg')}}"
                                         alt="product-img">
                                 </a>
 
@@ -674,79 +658,9 @@
                         <div class="product-card">
                             <div class="product-card-img">
                                 <a class="hover-switch" href="collection-left-sidebar.html">
-                                    <img class="secondary-img" src="{{asset('assets/images/dummy-3.jpg')}}"
+                                    <img class="secondary-img" src="{{asset('assets/images/39.jpg')}}"
                                         alt="product-img">
-                                    <img class="primary-img" src="{{asset('assets/images/dummy-3.jpg')}}"
-                                        alt="product-img">
-                                </a>
-
-                                <div class="product-card-action product-card-action-2">
-                                    <a href="#quickview-modal" class="quickview-btn btn-primary"
-                                        data-bs-toggle="modal">QUICKVIEW</a>
-                                    <a href="#" class="addtocart-btn btn-primary">ADD TO CART</a>
-                                </div>
-
-                                <a href="wishlist.html" class="wishlist-btn card-wishlist">
-                                    <svg class="icon icon-wishlist" width="26" height="22" viewBox="0 0 26 22"
-                                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M6.96429 0.000183105C3.12305 0.000183105 0 3.10686 0 6.84843C0 8.15388 0.602121 9.28455 1.16071 10.1014C1.71931 10.9181 2.29241 11.4425 2.29241 11.4425L12.3326 21.3439L13 22.0002L13.6674 21.3439L23.7076 11.4425C23.7076 11.4425 26 9.45576 26 6.84843C26 3.10686 22.877 0.000183105 19.0357 0.000183105C15.8474 0.000183105 13.7944 1.88702 13 2.68241C12.2056 1.88702 10.1526 0.000183105 6.96429 0.000183105ZM6.96429 1.82638C9.73912 1.82638 12.3036 4.48008 12.3036 4.48008L13 5.25051L13.6964 4.48008C13.6964 4.48008 16.2609 1.82638 19.0357 1.82638C21.8613 1.82638 24.1429 4.10557 24.1429 6.84843C24.1429 8.25732 22.4018 10.1584 22.4018 10.1584L13 19.4036L3.59821 10.1584C3.59821 10.1584 3.14844 9.73397 2.69866 9.07411C2.24888 8.41426 1.85714 7.55466 1.85714 6.84843C1.85714 4.10557 4.13867 1.82638 6.96429 1.82638Z"
-                                            fill="black" />
-                                    </svg>
-                                </a>
-                            </div>
-                            <div class="product-card-details text-center">
-                                <h3 class="product-card-title"><a href="collection-left-sidebar.html">nike legend
-                                        stripe</a>
-                                </h3>
-                                <div class="product-card-price">
-                                    <span class="card-price-regular">$529</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="new-item" data-aos="fade-up" data-aos-duration="300">
-                        <div class="product-card">
-                            <div class="product-card-img">
-                                <a class="hover-switch" href="collection-left-sidebar.html">
-                                    <img class="secondary-img" src="{{asset('assets/images/dummy-3.jpg')}}"
-                                        alt="product-img">
-                                    <img class="primary-img" src="{{asset('assets/images/dummy-3.jpg')}}"
-                                        alt="product-img">
-                                </a>
-
-                                <div class="product-card-action product-card-action-2">
-                                    <a href="#quickview-modal" class="quickview-btn btn-primary"
-                                        data-bs-toggle="modal">QUICKVIEW</a>    
-                                    <a href="#" class="addtocart-btn btn-primary">ADD TO CART</a>
-                                </div>
-
-                                <a href="wishlist.html" class="wishlist-btn card-wishlist">
-                                    <svg class="icon icon-wishlist" width="26" height="22" viewBox="0 0 26 22"
-                                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M6.96429 0.000183105C3.12305 0.000183105 0 3.10686 0 6.84843C0 8.15388 0.602121 9.28455 1.16071 10.1014C1.71931 10.9181 2.29241 11.4425 2.29241 11.4425L12.3326 21.3439L13 22.0002L13.6674 21.3439L23.7076 11.4425C23.7076 11.4425 26 9.45576 26 6.84843C26 3.10686 22.877 0.000183105 19.0357 0.000183105C15.8474 0.000183105 13.7944 1.88702 13 2.68241C12.2056 1.88702 10.1526 0.000183105 6.96429 0.000183105ZM6.96429 1.82638C9.73912 1.82638 12.3036 4.48008 12.3036 4.48008L13 5.25051L13.6964 4.48008C13.6964 4.48008 16.2609 1.82638 19.0357 1.82638C21.8613 1.82638 24.1429 4.10557 24.1429 6.84843C24.1429 8.25732 22.4018 10.1584 22.4018 10.1584L13 19.4036L3.59821 10.1584C3.59821 10.1584 3.14844 9.73397 2.69866 9.07411C2.24888 8.41426 1.85714 7.55466 1.85714 6.84843C1.85714 4.10557 4.13867 1.82638 6.96429 1.82638Z"
-                                            fill="black" />
-                                    </svg>
-                                </a>
-                            </div>
-                            <div class="product-card-details text-center">
-                                <h3 class="product-card-title"><a href="collection-left-sidebar.html">nike legend
-                                        stripe</a>
-                                </h3>
-                                <div class="product-card-price">
-                                    <span class="card-price-regular">$529</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="new-item" data-aos="fade-up" data-aos-duration="300">
-                        <div class="product-card">
-                            <div class="product-card-img">
-                                <a class="hover-switch" href="collection-left-sidebar.html">
-                                    <img class="secondary-img" src="{{asset('assets/images/dummy-3.jpg')}}"
-                                        alt="product-img">
-                                    <img class="primary-img" src="{{asset('assets/images/dummy-3.jpg')}}"
+                                    <img class="primary-img" src="{{asset('assets/images/39.jpg')}}"
                                         alt="product-img">
                                 </a>
 
@@ -779,9 +693,79 @@
                         <div class="product-card">
                             <div class="product-card-img">
                                 <a class="hover-switch" href="collection-left-sidebar.html">
-                                    <img class="secondary-img" src="{{asset('assets/images/dummy-3.jpg')}}"
+                                    <img class="secondary-img" src="{{asset('assets/images/39.jpg')}}"
                                         alt="product-img">
-                                    <img class="primary-img" src="{{asset('assets/images/dummy-3.jpg')}}"
+                                    <img class="primary-img" src="{{asset('assets/images/39.jpg')}}"
+                                        alt="product-img">
+                                </a>
+
+                                <div class="product-card-action product-card-action-2">
+                                    <a href="#quickview-modal" class="quickview-btn btn-primary"
+                                        data-bs-toggle="modal">QUICKVIEW</a>
+                                    <a href="#" class="addtocart-btn btn-primary">ADD TO CART</a>
+                                </div>
+
+                                <a href="wishlist.html" class="wishlist-btn card-wishlist">
+                                    <svg class="icon icon-wishlist" width="26" height="22" viewBox="0 0 26 22"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M6.96429 0.000183105C3.12305 0.000183105 0 3.10686 0 6.84843C0 8.15388 0.602121 9.28455 1.16071 10.1014C1.71931 10.9181 2.29241 11.4425 2.29241 11.4425L12.3326 21.3439L13 22.0002L13.6674 21.3439L23.7076 11.4425C23.7076 11.4425 26 9.45576 26 6.84843C26 3.10686 22.877 0.000183105 19.0357 0.000183105C15.8474 0.000183105 13.7944 1.88702 13 2.68241C12.2056 1.88702 10.1526 0.000183105 6.96429 0.000183105ZM6.96429 1.82638C9.73912 1.82638 12.3036 4.48008 12.3036 4.48008L13 5.25051L13.6964 4.48008C13.6964 4.48008 16.2609 1.82638 19.0357 1.82638C21.8613 1.82638 24.1429 4.10557 24.1429 6.84843C24.1429 8.25732 22.4018 10.1584 22.4018 10.1584L13 19.4036L3.59821 10.1584C3.59821 10.1584 3.14844 9.73397 2.69866 9.07411C2.24888 8.41426 1.85714 7.55466 1.85714 6.84843C1.85714 4.10557 4.13867 1.82638 6.96429 1.82638Z"
+                                            fill="black" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="product-card-details text-center">
+                                <h3 class="product-card-title"><a href="collection-left-sidebar.html">nike legend
+                                        stripe</a>
+                                </h3>
+                                <div class="product-card-price">
+                                    <span class="card-price-regular">$529</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="new-item" data-aos="fade-up" data-aos-duration="300">
+                        <div class="product-card">
+                            <div class="product-card-img">
+                                <a class="hover-switch" href="collection-left-sidebar.html">
+                                    <img class="secondary-img" src="{{asset('assets/images/39.jpg')}}"
+                                        alt="product-img">
+                                    <img class="primary-img" src="{{asset('assets/images/39.jpg')}}"
+                                        alt="product-img">
+                                </a>
+
+                                <div class="product-card-action product-card-action-2">
+                                    <a href="#quickview-modal" class="quickview-btn btn-primary"
+                                        data-bs-toggle="modal">QUICKVIEW</a>
+                                    <a href="#" class="addtocart-btn btn-primary">ADD TO CART</a>
+                                </div>
+
+                                <a href="wishlist.html" class="wishlist-btn card-wishlist">
+                                    <svg class="icon icon-wishlist" width="26" height="22" viewBox="0 0 26 22"
+                                        fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M6.96429 0.000183105C3.12305 0.000183105 0 3.10686 0 6.84843C0 8.15388 0.602121 9.28455 1.16071 10.1014C1.71931 10.9181 2.29241 11.4425 2.29241 11.4425L12.3326 21.3439L13 22.0002L13.6674 21.3439L23.7076 11.4425C23.7076 11.4425 26 9.45576 26 6.84843C26 3.10686 22.877 0.000183105 19.0357 0.000183105C15.8474 0.000183105 13.7944 1.88702 13 2.68241C12.2056 1.88702 10.1526 0.000183105 6.96429 0.000183105ZM6.96429 1.82638C9.73912 1.82638 12.3036 4.48008 12.3036 4.48008L13 5.25051L13.6964 4.48008C13.6964 4.48008 16.2609 1.82638 19.0357 1.82638C21.8613 1.82638 24.1429 4.10557 24.1429 6.84843C24.1429 8.25732 22.4018 10.1584 22.4018 10.1584L13 19.4036L3.59821 10.1584C3.59821 10.1584 3.14844 9.73397 2.69866 9.07411C2.24888 8.41426 1.85714 7.55466 1.85714 6.84843C1.85714 4.10557 4.13867 1.82638 6.96429 1.82638Z"
+                                            fill="black" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="product-card-details text-center">
+                                <h3 class="product-card-title"><a href="collection-left-sidebar.html">nike legend
+                                        stripe</a>
+                                </h3>
+                                <div class="product-card-price">
+                                    <span class="card-price-regular">$529</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="new-item" data-aos="fade-up" data-aos-duration="300">
+                        <div class="product-card">
+                            <div class="product-card-img">
+                                <a class="hover-switch" href="collection-left-sidebar.html">
+                                    <img class="secondary-img" src="{{asset('assets/images/39.jpg')}}"
+                                        alt="product-img">
+                                    <img class="primary-img" src="{{asset('assets/images/39.jpg')}}"
                                         alt="product-img">
                                 </a>
 
@@ -814,9 +798,9 @@
                         <div class="product-card">
                             <div class="product-card-img">
                                 <a class="hover-switch" href="collection-left-sidebar.html">
-                                    <img class="secondary-img" src="{{asset('assets/images/dummy-3.jpg')}}"
+                                    <img class="secondary-img" src="{{asset('assets/images/39.jpg')}}"
                                         alt="product-img">
-                                    <img class="primary-img" src="{{asset('assets/images/dummy-3.jpg')}}"
+                                    <img class="primary-img" src="{{asset('assets/images/39.jpg')}}"
                                         alt="product-img">
                                 </a>
 
@@ -853,8 +837,6 @@
             <!-- you may also lik end -->
         </main>
 
-
-        <!-- main content end -->
 
 
 @endsection

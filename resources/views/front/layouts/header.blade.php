@@ -17,7 +17,7 @@
                     <div class="col-lg-3 d-lg-block d-none">
                         <div class="announcement-meta-wrapper d-flex align-items-center justify-content-end">
                             <div class="announcement-meta d-flex align-items-center">
-                                <a class="announcement-login announcement-text text-white" href="login.html">
+                                <a class="announcement-login announcement-text text-white" href="login">
                                     <svg class="icon icon-user" width="10" height="11" viewBox="0 0 10 11" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -35,7 +35,7 @@
                                 <div class="currency-wrapper">
                                     <button type="button" class="currency-btn btn-reset text-white"
                                         data-bs-toggle="dropdown" aria-expanded="false">
-                                        <img class="flag" src="assets/img/flag/usd.jpg" alt="img">
+                                        <img class="flag" src="{{asset('assets/images/cad.jpg')}}" alt="img">
                                         <span>USD</span>
                                         <span>
                                             <svg class="icon icon-dropdown" xmlns="http://www.w3.org/2000/svg"
@@ -49,31 +49,31 @@
                                     <ul class="currency-list dropdown-menu dropdown-menu-end px-2">
                                         <li class="currency-list-item ">
                                             <a class="currency-list-option" href="#" data-value="USD">
-                                                <img class="flag" src="assets/img/flag/usd.jpg" alt="img">
+                                                <img class="flag" src="{{asset('assets/images/cad.jpg')}}" alt="img">
                                                 <span>USD</span>
                                             </a>
                                         </li>
                                         <li class="currency-list-item ">
                                             <a class="currency-list-option" href="#" data-value="CAD">
-                                                <img class="flag" src="assets/img/flag/cad.jpg" alt="img">
+                                                <img class="flag" src="{{asset('assets/images/cad.jpg')}}" alt="img">
                                                 <span>CAD</span>
                                             </a>
                                         </li>
                                         <li class="currency-list-item ">
                                             <a class="currency-list-option" href="#" data-value="EUR">
-                                                <img class="flag" src="assets/img/flag/eur.jpg" alt="img">
+                                                <img class="flag" src="{{asset('assets/images/cad.jpg')}}" alt="img">
                                                 <span>EUR</span>
                                             </a>
                                         </li>
                                         <li class="currency-list-item ">
                                             <a class="currency-list-option" href="#" data-value="JPY">
-                                                <img class="flag" src="assets/img/flag/jpy.jpg" alt="img">
+                                                <img class="flag" src="{{asset('assets/images/cad.jpg')}}" alt="img">
                                                 <span>JPY</span>
                                             </a>
                                         </li>
                                         <li class="currency-list-item ">
                                             <a class="currency-list-option" href="#" data-value="GBP">
-                                                <img class="flag" src="assets/img/flag/gbp.jpg" alt="img">
+                                                <img class="flag" src="{{asset('assets/images/cad.jpg')}}" alt="img">
                                                 <span>GBP</span>
                                             </a>
                                         </li>
@@ -136,7 +136,7 @@
                         </div>
                         <div class="col-lg-3 col-md-8 col-8">
                             <div class="header-action d-flex align-items-center justify-content-end">
-                                <a class="header-action-item header-search" href="javascript:void(0)">
+                            <a class="header-action-item header-search" href="javascript:void(0)">
                                     <svg class="icon icon-search" width="20" height="20" viewBox="0 0 20 20" fill="none"
                                         xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -145,7 +145,7 @@
                                     </svg>
                                 </a>
                                 <a class="header-action-item header-wishlist ms-4 d-none d-lg-block"
-                                    href="wishlist.html">
+                                    href="wishlist">
                                     <svg class="icon icon-wishlist" width="26" height="22" viewBox="0 0 26 22"
                                         fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path
@@ -217,17 +217,17 @@
                         <!-- minicart item -->
                         <div class="minicart-item d-flex">
                             <div class="mini-img-wrapper">
-                                <img class="mini-img" src="assets/img/products/furniture/1.jpg" alt="img">
+                                <img class="mini-img" src="{{asset('assets/images/cad.jpg')}}" alt="img">
                             </div>
                             <div class="product-info">
                                 <h2 class="product-title"><a href="#">Eliot Reversible Sectional</a></h2>
                                 <p class="product-vendor">XS / Dove Gray</p>
                                 <div class="misc d-flex align-items-end justify-content-between">
                                     <div class="quantity d-flex align-items-center justify-content-between">
-                                        <button class="qty-btn dec-qty"><img src="assets/img/icon/minus.svg"
+                                        <button class="qty-btn dec-qty"><img src="{{asset('assets/images/cad.jpg')}}"
                                                 alt="minus"></button>
                                         <input class="qty-input" type="number" name="qty" value="1" min="0">
-                                        <button class="qty-btn inc-qty"><img src="assets/img/icon/plus.svg"
+                                        <button class="qty-btn inc-qty"><img src="{{asset('assets/images/cad.jpg')}}"
                                                 alt="plus"></button>
                                     </div>
                                     <div class="product-remove-area d-flex flex-column align-items-end">
@@ -240,17 +240,17 @@
                         <!-- minicart item -->
                         <div class="minicart-item d-flex">
                             <div class="mini-img-wrapper">
-                                <img class="mini-img" src="assets/img/products/furniture/2.jpg" alt="img">
+                                <img class="mini-img" src="{{asset('assets/images/cad.jpg')}}" alt="img">
                             </div>
                             <div class="product-info">
                                 <h2 class="product-title"><a href="#">Vita Lounge Chair</a></h2>
                                 <p class="product-vendor">XS / Pink</p>
                                 <div class="misc d-flex align-items-end justify-content-between">
                                     <div class="quantity d-flex align-items-center justify-content-between">
-                                        <button class="qty-btn dec-qty"><img src="assets/img/icon/minus.svg"
+                                        <button class="qty-btn dec-qty"><img src="{{asset('assets/images/cad.jpg')}}"
                                                 alt="minus"></button>
                                         <input class="qty-input" type="number" name="qty" value="1" min="0">
-                                        <button class="qty-btn inc-qty"><img src="assets/img/icon/plus.svg"
+                                        <button class="qty-btn inc-qty"><img src="{{asset('assets/images/cad.jpg')}}"
                                                 alt="plus"></button>
                                     </div>
                                     <div class="product-remove-area d-flex flex-column align-items-end">
@@ -263,17 +263,17 @@
                         <!-- minicart item -->
                         <div class="minicart-item d-flex">
                             <div class="mini-img-wrapper">
-                                <img class="mini-img" src="assets/img/products/furniture/3.jpg" alt="img">
+                                <img class="mini-img" src="{{asset('assets/images/cad.jpg')}}" alt="img">
                             </div>
                             <div class="product-info">
                                 <h2 class="product-title"><a href="#">Sarno Dining Chair</a></h2>
                                 <p class="product-vendor">XS / Dove Gray</p>
                                 <div class="misc d-flex align-items-end justify-content-between">
                                     <div class="quantity d-flex align-items-center justify-content-between">
-                                        <button class="qty-btn dec-qty"><img src="assets/img/icon/minus.svg"
+                                        <button class="qty-btn dec-qty"><img src="{{asset('assets/images/cad.jpg')}}"
                                                 alt="minus"></button>
                                         <input class="qty-input" type="number" name="qty" value="1" min="0">
-                                        <button class="qty-btn inc-qty"><img src="assets/img/icon/plus.svg"
+                                        <button class="qty-btn inc-qty"><img src="{{asset('assets/images/cad.jpg')}}"
                                                 alt="plus"></button>
                                     </div>
                                     <div class="product-remove-area d-flex flex-column align-items-end">
@@ -286,17 +286,17 @@
                         <!-- minicart item -->
                         <div class="minicart-item d-flex">
                             <div class="mini-img-wrapper">
-                                <img class="mini-img" src="assets/img/products/furniture/4.jpg" alt="img">
+                                <img class="mini-img" src="{{asset('assets/images/cad.jpg')}}" alt="img">
                             </div>
                             <div class="product-info">
                                 <h2 class="product-title"><a href="#">Vita Lounge Chair</a></h2>
                                 <p class="product-vendor">XS / Dove Gray</p>
                                 <div class="misc d-flex align-items-end justify-content-between">
                                     <div class="quantity d-flex align-items-center justify-content-between">
-                                        <button class="qty-btn dec-qty"><img src="assets/img/icon/minus.svg"
+                                        <button class="qty-btn dec-qty"><img src="{{asset('assets/images/cad.jpg')}}"
                                                 alt="minus"></button>
                                         <input class="qty-input" type="number" name="qty" value="1" min="0">
-                                        <button class="qty-btn inc-qty"><img src="assets/img/icon/plus.svg"
+                                        <button class="qty-btn inc-qty"><img src="{{asset('assets/images/cad.jpg')}}"
                                                 alt="plus"></button>
                                     </div>
                                     <div class="product-remove-area d-flex flex-column align-items-end">
@@ -338,9 +338,9 @@
             </div>
         </div>
         <!-- drawer cart end -->
-
         </header>
 
+        
         
 
         <style>

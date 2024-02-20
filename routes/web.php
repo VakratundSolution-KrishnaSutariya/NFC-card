@@ -74,6 +74,25 @@ Route::get('/product', function () {
     return view('front.home.product');
 });
 
+Route::get('/404', function () {
+    return view('front.home.404');
+});
+
+Route::get('/wishlist', function () {
+    return view('front.home.wishlist');
+});
+
+Route::get('/cart', function () {
+    return view('front.home.cart');
+});
+
+Route::get('/checkout', function () {
+    return view('front.home.checkout');
+});
+
+Route::get('/article', function () {
+    return view('front.home.article');
+});
 
 Route::get('/', function () {
     return (! Auth::check()) ? \redirect(route('login')) : Redirect::to('/');
