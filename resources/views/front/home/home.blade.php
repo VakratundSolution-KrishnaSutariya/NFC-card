@@ -24,7 +24,7 @@
                                                 {{ $setting['sub_text'] ?? '' }}
                                             </p>
                                             <a class="btn-primary slide-btn animate__animated animate__fadeInUp"
-                                                href="collection-left-sidebar.html"
+                                                href="{{ url('shop') }}"
                                                 data-animation="animate__animated animate__fadeInUp">SHOP
                                                 NOW</a>
                                         </div>
@@ -46,7 +46,7 @@
                                                 {{ $setting['sub_text'] ?? '' }}
                                             </p>
                                             <a class="btn-primary slide-btn animate__animated animate__fadeInUp"
-                                                href="collection-left-sidebar.html"
+                                                href="{{ url('shop') }}"
                                                 data-animation="animate__animated animate__fadeInUp">SHOP
                                                 NOW</a>
                                         </div>
@@ -132,7 +132,7 @@
                 <div class="collection-tab-inner mt-0">
                     <div class="container">
                         <div class="grid-container-2">
-                            <a class="grid-item grid-item-1 position-relative rounded mt-0 d-flex" href="collection-left-sidebar.html"
+                            <a class="grid-item grid-item-1 position-relative rounded mt-0 d-flex" href="{{ url('shop') }}"
                                 data-aos="fade-right" data-aos-duration="700">
                                 <img class="banner-img rounded" src="{{asset('assets/images/f1.jpg')}}" alt="banner-1">
                                 <div class="content-absolute content-slide">
@@ -147,7 +147,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a class="grid-item grid-item-2 position-relative rounded mt-0 d-flex" href="collection-left-sidebar.html"
+                            <a class="grid-item grid-item-2 position-relative rounded mt-0 d-flex" href="{{ url('shop') }}"
                                 data-aos="fade-right" data-aos-duration="700">
                                 <img class="banner-img rounded" src="{{asset('assets/images/f3.jpg')}}" alt="banner-1">
                                 <div class="content-absolute content-slide">
@@ -162,7 +162,7 @@
                                     </div>
                                 </div>
                             </a>
-                            <a class="grid-item grid-item-3 position-relative rounded mt-0 d-flex" href="collection-left-sidebar.html"
+                            <a class="grid-item grid-item-3 position-relative rounded mt-0 d-flex" href="{{ url('shop') }}"
                                 data-aos="fade-left" data-aos-duration="700">
                                 <img class="banner-img rounded" src="{{asset('assets/images/f2.jpg')}}" alt="banner-1">
                                 <div class="content-absolute content-slide">
@@ -257,7 +257,7 @@
                             <div class="col-lg-3 col-md-6 col-6" data-aos="fade-up" data-aos-duration="700">
                                 <div class="product-card">
                                     <div class="product-card-img">
-                                        <a class="hover-switch" href="collection-left-sidebar.html">
+                                        <a class="hover-switch" href="{{ url('shop') }}">
                                             <img class="secondary-img" src="{{asset('assets/images/1-2.png')}}"
                                                 alt="product-img">
                                             <img class="primary-img" src="{{asset('assets/images/22.png')}}"
@@ -303,7 +303,7 @@
                                             </li>
                                         </ul>
                                         <h3 class="product-card-title">
-                                            <a href="collection-left-sidebar.html">Vita Lounge Chair</a>
+                                            <a href="{{ url('shop') }}">Vita Lounge Chair</a>
                                         </h3>
                                         <div class="product-card-price">
                                             <span class="card-price-regular">$1529</span>
@@ -315,7 +315,7 @@
                             <div class="col-lg-3 col-md-6 col-6" data-aos="fade-up" data-aos-duration="700">
                                 <div class="product-card">
                                     <div class="product-card-img">
-                                        <a class="hover-switch" href="collection-left-sidebar.html">
+                                        <a class="hover-switch" href="{{ url('shop') }}">
                                             <img class="secondary-img" src="{{asset('assets/images/1-2.png')}}"
                                                 alt="product-img">
                                             <img class="primary-img" src="{{asset('assets/images/22.png')}}"
@@ -365,7 +365,7 @@
                                             </li>
                                         </ul>
                                         <h3 class="product-card-title">
-                                            <a href="collection-left-sidebar.html">Sarno Dining Chair</a>
+                                            <a href="{{ url('shop') }}">Sarno Dining Chair</a>
                                         </h3>
                                         <div class="product-card-price">
                                             <span class="card-price-regular">$1529</span>
@@ -377,7 +377,7 @@
                             <div class="col-lg-3 col-md-6 col-6" data-aos="fade-up" data-aos-duration="700">
                                 <div class="product-card">
                                     <div class="product-card-img">
-                                        <a class="hover-switch" href="collection-left-sidebar.html">
+                                        <a class="hover-switch" href="{{ url('shop') }}">
                                             <img class="secondary-img" src="{{asset('assets/images/1-2.png')}}"
                                                 alt="product-img">
                                             <img class="primary-img" src="{{asset('assets/images/22.png')}}"
@@ -423,7 +423,7 @@
                                             </li>
                                         </ul>
                                         <h3 class="product-card-title">
-                                            <a href="collection-left-sidebar.html">bisum tea table</a>
+                                            <a href="{{ url('shop') }}">bisum tea table</a>
                                         </h3>
                                         <div class="product-card-price">
                                             <span class="card-price-regular">$1529</span>
@@ -434,7 +434,7 @@
                             </div>
                         </div>
                         <div class="view-all text-center" data-aos="fade-up" data-aos-duration="700">
-                            <a class="btn-primary" href="#">VIEW ALL</a>
+                            <a class="btn-primary" href="{{ url('shop') }}">VIEW ALL</a>
                         </div>
                     </div>
                 </div>
@@ -644,7 +644,7 @@
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus.
                                 </p>
                                 <a class="btn-primary single-banner-btn animate__animated animate__fadeInUp"
-                                    href="collection-left-sidebar.html"
+                                    href="{{ url('shop') }}"
                                     data-animation="animate__animated animate__fadeInUp" data-aos="fade-up"
                                     data-aos-duration="700">
                                     DISCOVER NOW

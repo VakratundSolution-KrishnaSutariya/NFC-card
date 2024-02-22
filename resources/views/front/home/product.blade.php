@@ -45,104 +45,60 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-6 col-md-12 col-12">
-                            <div class="product-gallery product-gallery-vertical d-flex">
-                                <div class="product-img-large">
-                                    <div class="img-large-slider common-slider" data-slick='{
-                                        "slidesToShow": 1, 
-                                        "slidesToScroll": 1,
-                                        "dots": false,
-                                        "arrows": false,
-                                        "asNavFor": ".img-thumb-slider"
-                                    }'>
-                                        <div class="img-large-wrapper">
-                                            <a href="assets/img/products/bags/39.jpg" data-fancybox="gallery">
-                                                <img src="{{asset('assets/images/39.jpg')}}" alt="img">
-                                            </a>
-                                        </div>
-                                        <div class="img-large-wrapper">
-                                            <a href="assets/img/products/bags/38.jpg" data-fancybox="gallery">
-                                                <img src="{{asset('assets/images/39.jpg')}}" alt="img">
-                                            </a>
-                                        </div>
-                                        <div class="img-large-wrapper">
-                                            <a href="assets/img/products/bags/37.jpg" data-fancybox="gallery">
-                                                <img src="{{asset('assets/images/39.jpg')}}" alt="img">
-                                            </a>
-                                        </div>
-                                        <div class="img-large-wrapper">
-                                            <a href="assets/img/products/bags/36.jpg" data-fancybox="gallery">
-                                                <img src="{{asset('assets/images/39.jpg')}}" alt="img">
-                                            </a>
-                                        </div>
-                                        <div class="img-large-wrapper">
-                                            <a href="assets/img/products/bags/34.jpg" data-fancybox="gallery">
-                                                <img src="{{asset('assets/images/39.jpg')}}" alt="img">
-                                            </a>
-                                        </div>
-                                        <div class="img-large-wrapper">
-                                            <a href="assets/img/products/bags/30.jpg" data-fancybox="gallery">
-                                                <img src="{{asset('assets/images/39.jpg')}}" alt="img">
-                                            </a>
-                                        </div>
-                                        <div class="img-large-wrapper">
-                                            <a href="assets/img/products/bags/32.jpg" data-fancybox="gallery">
-                                                <img src="{{asset('assets/images/39.jpg')}}" alt="img">
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="product-img-thumb">
-                                    <div class="img-thumb-slider common-slider" data-vertical-slider="true" data-slick='{
-                                        "slidesToShow": 5, 
-                                        "slidesToScroll": 1,
-                                        "dots": false,
-                                        "arrows": true,
-                                        "infinite": false,
-                                        "speed": 300,
-                                        "cssEase": "ease",
-                                        "focusOnSelect": true,
-                                        "swipeToSlide": true,
-                                        "asNavFor": ".img-large-slider"
-                                    }'>
-                                        <div>
-                                            <div class="img-thumb-wrapper">
-                                                <img src="{{asset('assets/images/39.jpg')}}" alt="img">
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="img-thumb-wrapper">
-                                                <img src="{{asset('assets/images/39.jpg')}}" alt="img">
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="img-thumb-wrapper">
-                                                <img src="{{asset('assets/images/39.jpg')}}" alt="img">
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="img-thumb-wrapper">
-                                                <img src="{{asset('assets/images/39.jpg')}}" alt="img">
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="img-thumb-wrapper">
-                                                <img src="{{asset('assets/images/39.jpg')}}" alt="img">
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="img-thumb-wrapper">
-                                                <img src="{{asset('assets/images/39.jpg')}}" alt="img">
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div class="img-thumb-wrapper">
-                                                <img src="{{asset('assets/images/39.jpg')}}" alt="img">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="activate-arrows show-arrows-always arrows-white d-none d-lg-flex justify-content-between mt-3"></div>
-                                </div>
-                            </div>
+                        <div class="slider">
+        <div class="list">
+            <div class="item active">
+                <img src="{{asset('assets/images/cards-1.jpg')}}" alt="">
+                
+
+            </div>
+            <div class="item">
+                <img src="{{asset('assets/images/cards-3.jpg')}}" alt="">
+                
+
+            </div>
+            <div class="item">
+                <img src="{{asset('assets/images/cards-2.jpg')}}" alt="">
+               
+
+            </div>
+            <div class="item">
+                <img src="{{asset('assets/images/cards-1.jpg')}}" alt="">
+              
+
+            </div>
+        </div>
+
+        <!-- button arrow -->
+<div class="arrows">
+        <button id="prev"><</button>
+        
+        <button id="next">></button>
+    </div>
+
+    <!-- thumbmnail -->
+    <div class="thumbnail">
+        <div class="item active">
+            <img src="{{asset('assets/images/card-3.jpg')}}" alt="">
+            
+        </div>
+        
+        <div class="item">
+            <img src="{{asset('assets/images/cards-1.jpg')}}" alt="">
+            </div>
+        
+        <div class="item">
+            <img src="{{asset('assets/images/cards-2.jpg')}}" alt="">
+            </div>
+        
+        <div class="item">
+            <img src="{{asset('assets/images/cards-3.jpg')}}" alt=""></div>
+            
+    </div>
+     
+
+    </div>
+    
                         </div>
                         <div class="col-lg-6 col-md-12 col-12">
                             <div class="product-details ps-lg-4">
@@ -837,6 +793,69 @@
             <!-- you may also lik end -->
         </main>
 
-
+<script>
+    let items = document.querySelectorAll('.slider .list .item');
+ let next = document.getElementById('next');
+ let prev = document.getElementById('prev');
+ let thumbnails = document.querySelectorAll('.thumbnail .item');
+ 
+ let countItem = items.length;
+ let itemActive = 0;
+ 
+ next.onclick = function(){
+     itemActive = itemActive + 1;
+     if(itemActive >= countItem){
+         itemActive = 0; 
+     }
+     showSLider();
+ 
+ }
+ 
+ prev.onclick = function(){
+     itemActive = itemActive -1;
+     if(
+         itemActive < 0){
+             itemActive = countItem - 1;
+ 
+         }
+     showSLider();
+ }
+ 
+ // auto run slider
+ let refreshInterval = setInterval(() => {
+     next.click();
+ }, 3000)
+ 
+ function showSLider(){
+ 
+     // remove item active old
+     let itemActiveOld = document.querySelector('.slider .list .item.active');
+     let thumbnailActiveOld = document.querySelector('.thumbnail .item.active');
+     itemActiveOld.classList.remove('active');
+     thumbnailActiveOld.classList.remove('active');
+ 
+ 
+     // active new item
+     items[itemActive].classList.add('active');
+     thumbnails[itemActive].classList.add('active');
+ 
+     // clear auto time run slider
+ 
+     clearInterval(refreshInterval);
+     refreshInterval = setInterval(() => {
+         next.click();
+ 
+     },5000)
+ 
+ }   
+         //  click thumbnail
+ thumbnails.forEach((thumbnail, index) => {
+     thumbnail.addEventListener('click', () => {
+         itemActive = index;
+         showSLider();
+     })
+ })
+ 
+</script>
 
 @endsection
