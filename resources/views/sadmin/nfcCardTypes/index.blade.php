@@ -1,12 +1,14 @@
 @extends('layouts.app')
 @section('title')
-    {{__('messages.vcards_templates')}}
+    {{__('Sell NFC Cards')}}
 @endsection
 @section('content')
+
     <div class="container-fluid">
         <div class="d-flex flex-column table-striped">
             @include('flash::message')
-            <livewire:template-table/>
+            <livewire:nfctypes-table/>
         </div>
     </div>
-@endsection 
+    
+@endsection

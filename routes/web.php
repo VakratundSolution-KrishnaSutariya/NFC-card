@@ -275,6 +275,15 @@ Route::middleware('auth', 'valid.user', 'xss')->group(function () {
         Route::get('/impersonate/{user}', [UserController::class, 'impersonate'])->name('impersonate');
         //vcard
         Route::get('/vcards', [VcardController::class, 'vcards'])->name('sadmin.vcards.index');
+
+        //nfc-card-types
+        //Route::get('sadmin/nfc-card-types', [NfcCardTypesController::class, 'index'])->name('sadmin.nfcCardTypes.index');
+        Route::get('/nfcCardTypes', [App\Http\Controllers\NfcCardTypesController::class, 'index'])->name('sadmin.nfcCardTypes.index');
+        
+        Route::get('/nfcCardTypes/nfcCardOrders', [App\Http\Controllers\NfcCardTypesController::class, 'NfcCardOrder'])->name('sadmin.nfcCardTypes.nfcCardOrders.index');
+
+
+
         //affiliate Users
         Route::get('/affiliate-users', [AffiliateUserController::class, 'index'])->name('sadmin.affiliate-user.index');
         //affiliation withdraw

@@ -26,6 +26,7 @@ use Stancl\Tenancy\Database\Concerns\BelongsToTenant;
  * @property float|null $plan_amount
  * @property float|null $payable_amount
  * @property int $plan_frequency 1 = Month, 2 = Year
+ * 
  * @property string $starts_at
  * @property string $ends_at
  * @property string|null $trial_ends_at

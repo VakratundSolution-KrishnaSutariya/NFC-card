@@ -30,6 +30,22 @@
        href="{{ route('sadmin.vcards.index') }}">{{ __('messages.vcards') }}</a>
 </li>
 
+<!-- new sub menu start -->
+
+<li class="nav-item position-relative mx-xl-3 mb-3 mb-xl-0
+    {{ !Request::is('sadmin/nfcCardTypes*', 'sadmin/nfcCardTypes*') ? 'd-none' : '' }}">
+    <a class="nav-link p-0 {{ Request::is('sadmin/nfcCardTypes*') ? 'active' : '' }}"
+       href="{{ route('sadmin.nfcCardTypes.index') }}">{{ __('NFC Card Types') }}</a>
+</li>
+
+<li class="nav-item position-relative mx-xl-3 mb-3 mb-xl-0
+    {{ !Request::is('sadmin/nfcCardTypes*', 'sadmin.nfcCardTypes/nfcCardOrders*') ? 'd-none' : '' }}">
+    <a class="nav-link p-0 {{ Request::is('sadmin.nfcCardTypes/nfcCardOrders*') ? 'active' : '' }}"
+       href="{{ route('sadmin.nfcCardTypes.nfcCardOrders.index') }}">{{ __('NFC Card Orders') }}</a>
+</li>
+
+<!-- new sub menu end -->
+
 <li class="nav-item position-relative mx-xl-3 mb-3 mb-xl-0 {{ !Request::is('sadmin/templates*') ? 'd-none' : '' }}">
     <a class="nav-link p-0 {{ Request::is('sadmin/templates*') ? 'active' : '' }}"
        href="{{ route('sadmin.templates.index') }}">{{ __('messages.vcard.template') }}</a>

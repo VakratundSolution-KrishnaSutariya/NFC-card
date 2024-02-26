@@ -23,6 +23,18 @@
         {!! Form::label('trial_days', __('messages.plan.trial_days').':',['class' => 'form-label']) !!}
         {!! Form::number('trial_days', isset($plan) ? $plan->trial_days : null, ['class' => 'form-control', 'placeholder' => __('messages.form.enter_trial')]) !!}
     </div>
+
+    <!-- <div class="col-lg-6 mb-7">
+        {!! Form::label('Discount', __('Discount').':',['class' => 'form-label']) !!}
+        {!! Form::number('Discount', isset($plan) ? $plan->discount : null, ['class' => 'form-control', 'placeholder' => __('Enter discount percentage')]) !!}
+    </div>
+
+    <div class="col-lg-6 mb-7">
+        {!! Form::label('Tag', __('Tag').':',['class' => 'form-label']) !!}
+        {!! Form::number('Tag', isset($plan) ? $plan->tag : null, ['class' => 'form-control', 'placeholder' => __('Enter tag')]) !!}
+    </div> -->
+    
+    
     <div class="col-12 mb-2">
         {{ Form::label('template', __('messages.plan.multi_templates').':', ['class' => 'form-label required']) }}
     </div>

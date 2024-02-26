@@ -52,6 +52,7 @@ class PlanTable extends LivewireTableComponent
             Column::make(__('messages.plan.make_default'), 'is_default')
                 ->sortable(),
             Column::make(__('messages.common.action'))->addClass('w-100px justify-content-center d-flex'),
+          
         ];
     }
 

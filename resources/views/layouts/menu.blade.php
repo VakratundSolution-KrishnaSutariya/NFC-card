@@ -27,6 +27,18 @@
     </a>
 </li>
 
+
+<!-- new start -->
+
+<li class="nav-item {{ Request::is('sadmin/nfcCardTypes*') ? 'active' : '' }}">
+    <a class="nav-link d-flex align-items-center py-3" aria-current="page" href="{{ route('sadmin.nfcCardTypes.index') }}">
+        <span class="aside-menu-icon pe-3"><i class="fas fa-id-card"></i></span>
+        <span class="aside-menu-title">{{ __('Sell NFC Cards') }}</span>
+    </a>
+</li>
+
+<!-- new end -->
+
 <li class="nav-item {{ Request::is('sadmin/templates*') ? 'active' : '' }}">
     <a class="nav-link d-flex align-items-center py-3" aria-current="page" href="{{ route('sadmin.templates.index') }}">
         <span class="aside-menu-icon pe-3"><i class="fa fa-address-card"></i></span>

@@ -8,6 +8,7 @@ return [
     'dashboard'                                                  => 'لوحات القيادة',
     'users'                                                      => 'المستخدمون',
     'vcards'                                                     => 'بطاقات',
+    'Sell_NFC_Cards'                                             => 'بيع بطاقات NFC',
     'plans'                                                      => 'الخطط',
     'settings'                                                   => 'إعدادات',
     'roles'                                                      => 'الأدوار',
@@ -237,6 +238,7 @@ return [
         'subject'                 => 'موضوع',
         'delete'                  => 'حذف',
         'name'                    => 'اسم',
+        'discount'               => 'خصم',
         'email'                   => 'بريد الالكتروني',
         'phone'                   => 'هاتف',
         'message'                 => 'رسالة',
@@ -273,6 +275,7 @@ return [
         'paypal_email'          => 'بريد باي بال',
         'currency_position'     => 'وضع العملة',
         'show_currency_behind'  => 'إظهار العملة في الخلف',
+        
         
     ],
     'user'                                                       => [
