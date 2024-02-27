@@ -61,6 +61,7 @@ class NfcOrders extends Model
      */
     protected $fillable = [
         'user',
+        'order_status',   
         // 'currency_id',
         // 'price',
         // 'frequency',
@@ -71,86 +72,22 @@ class NfcOrders extends Model
 
     protected $casts = [
         'user'         => 'string',
-        // 'currency_id'  => 'integer',
-        // 'price'        => 'double',
-        // 'frequency'    => 'integer',
-        // 'is_default'   => 'integer',
-        // 'trial_days'   => 'integer',
-        // 'no_of_vcards' => 'integer',
+        'order_status' => 'int',
+        
+
+        
     ];
 
-    // const IS_DEFAULT = 1;
-
-    // const TRIAL_DAYS = 7;
-
-    // const MONTHLY = 1;
-
-    // const YEARLY = 2;
-
-    // const UNLIMITED = 3;
-
-    // const DURATION = [
-    //     self::MONTHLY => 'Month',
-    //     self::YEARLY => 'Year',
-    //     self::UNLIMITED => 'Unlimited',
-    // ];
-
-    // const STRIPE = 1;
-
-    // const PAYPAL = 2;
-
-    // const RAZORPAY = 3;
-
-    // const MANUALLY = 4;
-
-    // const PAYMENT_METHOD = [
-    //     self::STRIPE   => 'Stripe',
-    //     self::PAYPAL   => 'Paypal',
-    //     self::RAZORPAY => 'Razorpay',
-    //     self::MANUALLY => 'Manually',
-    // ];
-
-    // const PAYPAL_MODE = [
-    //     'sandbox' => 'Sandbox',
-    //     'live'    => 'Live',
-    // ];
 
     /**
      * @var array
      */
     public static $rules = [
         'user'         => 'required|string|min:2|unique:plans,name,',
+        'order_status' => 'nullable/integer'
         // 'currency_id'  => 'required',
         // 'no_of_vcards' => 'required|numeric',
     ];
 
-    // public function currency(): BelongsTo
-    // {
-    //     return $this->belongsTo(Currency::class, 'currency_id');
-    // }
-
-    // public function planFeature(): HasOne
-    // {
-    //     return $this->hasOne(PlanFeature::class, 'plan_id');
-    // }
-
-    // public function subscriptions(): HasMany
-    // {
-    //     return $this->hasMany(Subscription::class, 'plan_id');
-    // }
-
-    // public function templates(): BelongsToMany
-    // {
-    //     return $this->belongsToMany(Template::class);
-    // }
-
-    // public function hasZeroPlan()
-    // {
-    //     if (getLogInUser()) {
-    //         return $this->hasMany(Subscription::class)->where('plan_amount', 0)
-    //             ->where('tenant_id', getLogInUser()->tenant_id);
-    //     }
-
-    //     return $this->hasMany(Subscription::class)->where('plan_amount', 0);
-    // }
+   
 }

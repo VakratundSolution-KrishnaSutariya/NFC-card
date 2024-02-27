@@ -52,10 +52,10 @@ class NfcOrdersTable extends LivewireTableComponent
                 ->sortable()->searchable(),
                 Column::make(__('ORDER STATUS'), 'order_status')
                 ->sortable()->searchable(),
-                Column::make(__('messages.common.status'), 'status'),
+                Column::make(__('messages.common.status'), 'payment_status'),
                 Column::make(__('messages.subscription.start_date'), 'starts_at')
                 ->sortable(),
-                // Column::make(__('messages.common.action'))->addClass('justify-content-center d-flex'),
+                Column::make(__('messages.common.action'))->addClass('justify-content-center d-flex'),
             // Column::make(__('NFC CARD TYPE'), 'nfc_card_type')
             //     ->sortable()->searchable()->addClass('d-flex justify-content-end'),
             // Column::make(__('VCARD NAME'), 'vcard_name')
