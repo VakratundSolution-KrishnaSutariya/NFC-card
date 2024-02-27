@@ -4,17 +4,26 @@
     }
 </style>
 <x-livewire-tables::bs5.table.cell>
-    {{$row->name}}
+    {{$row->user}}
+</x-livewire-tables::bs5.table.cell>
+<x-livewire-tables::bs5.table.cell>
+    {{$row->nfc_card_type}}
+</x-livewire-tables::bs5.table.cell>
+<x-livewire-tables::bs5.table.cell>
+    {{$row->vcard_name}}
 </x-livewire-tables::bs5.table.cell>
 
-<x-livewire-tables::bs5.table.cell class="text-end">
-{{ $row->currency->currency_icon . ' ' . number_format($row->price) }}
-    {{ currencyFormat($row->price,0,$row->currency->currency_code) }}
+<x-livewire-tables::bs5.table.cell>
+	<div>
+	<select  class="dropp" name="language" id="language">
+  <option value="javascript">Pending</option>
+  <option value="python">Ready To Ship</option>
+  <option value="c++" disabled>Shipped</option>
+  <option value="java" selected>Delivered</option>
+  <option value="java" selected>Cancelled</option>
+</select>
+	</div>
 </x-livewire-tables::bs5.table.cell>
-
-
-
-
 
 
 <x-livewire-tables::bs5.table.cell>
@@ -24,6 +33,12 @@
 		       data-tenant="{{$row->tenant_id}}">
 	</div>
 </x-livewire-tables::bs5.table.cell>
+
+
+
+
+
+
 
 <x-livewire-tables::table.cell>
     <span class="badge bg-secondary me-2">

@@ -20,6 +20,22 @@ public $paginationTheme = 'bootstrap-5';
 
     public string $defaultSortDirection = 'desc';
 
+
+    public function render()
+    {
+        return view('livewire-tables::'.config('livewire-tables.theme').'.datatable')
+            ->with([
+                'columns' => $this->columns(),
+                'rowView' => $this->rowView(),
+                'filtersView' => $this->filtersView(),
+                'customFilters' => $this->filters(),
+                'rows' => $this->rows,
+                'modalsView' => $this->modalsView(),
+                'bulkActions' => $this->bulkActions,
+                'componentName' => 'sadmin.nfcCardTypes.add-button',
+            ]);
+    }
+
     public function columns(): array
     {
         

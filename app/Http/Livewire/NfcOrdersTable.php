@@ -10,19 +10,20 @@ class NfcOrdersTable extends LivewireTableComponent
 {
     public $paginationTheme = 'bootstrap-5';
 
-    // public string $primaryKey = 'plan_id';
+    public string $primaryKey = 'plan_id';
 
     public string $defaultSortColumn = 'created_at';
 
-    // public string $defaultSortDirection = 'desc';
+    public string $defaultSortDirection = 'desc';
 
-    // protected $listeners = ['refresh' => '$refresh', 'resetPageTable'];
+    protected $listeners = ['refresh' => '$refresh', 'resetPageTable'];
 
     protected string $pageName = 'nfcOrders-table';
 
     public function query(): Builder
     {
-        return NfcOrders::with(['user', 'vcardname'])->select('nfc_orders.*');
+        // return NfcOrders::with(['user', 'vcardname'])->select('nfc_orders.*');
+        return NfcOrders::query();
     }
 
     // public function render()
@@ -43,19 +44,29 @@ class NfcOrdersTable extends LivewireTableComponent
     public function columns(): array
     {
         return [
-            Column::make(__('USER'), 'name')
+            Column::make(__('USER'), 'user')
                 ->sortable()->searchable(),
-            Column::make(__('NFC CARD TYPE'), 'price')
-                ->sortable()->searchable()->addClass('d-flex justify-content-end'),
-            Column::make(__('VCARD NAME'), 'frequency')
-                ->sortable()->searchable()->addClass('duration-center'),
-            Column::make(__('ORDER STATUS'), 'is_default')
+                Column::make(__('NFC CARD TYPE'), 'nfc_card_type')
+                ->sortable()->searchable(),
+                Column::make(__('VCARD NAME'), 'vcard_name')
+                ->sortable()->searchable(),
+                Column::make(__('ORDER STATUS'), 'order_status')
+                ->sortable()->searchable(),
+                Column::make(__('messages.common.status'), 'status'),
+                Column::make(__('messages.subscription.start_date'), 'starts_at')
                 ->sortable(),
-                Column::make(__('PAYMENT STATUS'), 'is_default')
-                ->sortable(),
-                Column::make(__('CREATED AT'), 'is_default')
-                ->sortable(),
-            Column::make(__('messages.common.action'))->addClass('w-100px justify-content-center d-flex'),
+                // Column::make(__('messages.common.action'))->addClass('justify-content-center d-flex'),
+            // Column::make(__('NFC CARD TYPE'), 'nfc_card_type')
+            //     ->sortable()->searchable()->addClass('d-flex justify-content-end'),
+            // Column::make(__('VCARD NAME'), 'vcard_name')
+            //     ->sortable()->searchable()->addClass('duration-center'),
+            // Column::make(__('ORDER STATUS'), 'order_status')
+            //     ->sortable()->searchable()->addClass('duration-center'),
+            //     Column::make(__('PAYMENT STATUS'), 'payment_status')
+            //     ->sortable()->searchable()->addClass('duration-center'),
+            //     Column::make(__('CREATED AT'), 'created_at')
+            //     ->sortable()->searchable()->addClass('duration-center'),
+            // Column::make(__('messages.common.action'))->addClass('w-100px justify-content-center d-flex'),
             
         ];
     }
