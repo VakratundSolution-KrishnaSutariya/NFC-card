@@ -8,18 +8,17 @@ use Rappasoft\LaravelLivewireTables\Views\Column;
 
 class NfcTypesTable extends LivewireTableComponent
 {
-public $paginationTheme = 'bootstrap-5';
+    public $paginationTheme = 'bootstrap-5';
 
     protected $listeners = ['refresh' => '$refresh', 'changeFilter'];
 
     public string $primaryKey = 'id';
 
-    protected string $pageName = 'NfcTypes-table';
+    protected string $pageName = 'nfc-types-table';
 
     public string $defaultSortColumn = 'name';
 
     public string $defaultSortDirection = 'desc';
-
 
     public function render()
     {
@@ -38,29 +37,26 @@ public $paginationTheme = 'bootstrap-5';
 
     public function columns(): array
     {
-        
-
         return [
-            Column::make(__('messages.common.name'), 'name')
-                ->sortable()->searchable()->addClass('col-4'),
-                Column::make(__('ORDERS COUNT'), 'orders_count') // Adjust column name if necessary
-                ->sortable()->searchable()->addClass('col-4'),
-            Column::make(__('PRICE'), 'price') // Adjust column name if necessary
-                ->sortable()->searchable()->addClass('col-4'),
+            Column::make(__('messages.common.name'), 'name')->sortable()->searchable()->addClass('col-4'),
+            Column::make(__('ORDERS COUNT'), 'orders_count')->sortable()->searchable()->addClass('col-4'),
+            Column::make(__('PRICE'), 'price')->sortable()->searchable()->addClass('col-4'),
             Column::make(__('messages.common.action'))->addClass('w-150px justify-content-center d-flex'),
         ];
     }
 
     public function query(): Builder
     {
-       //return NfcTypes::with(['vcards', 'media'])->select('nfc_types.*');
-       
        return NfcTypes::query();
-
     }
 
     public function rowView(): string
     {
         return 'livewire-tables.rows.nfctypes_table';
+    }
+
+    public function resetPageTable($pageName = 'Nfc-types-table')
+    {
+        $this->customResetPage($pageName);
     }
 }

@@ -34,6 +34,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\UserSettingController;
 use App\Http\Controllers\VcardBlogController;
 use App\Http\Controllers\VcardController;
+use App\Http\Controllers\NfcCardTypesController;
 use App\Http\Controllers\VcardServiceController;
 use App\Http\Middleware\XSS;
 use Illuminate\Support\Facades\Auth;
@@ -305,10 +306,8 @@ Route::middleware('auth', 'valid.user', 'xss')->group(function () {
         Route::get('/vcards', [VcardController::class, 'vcards'])->name('sadmin.vcards.index');
 
         //nfc-card-types
-        //Route::get('sadmin/nfc-card-types', [NfcCardTypesController::class, 'index'])->name('sadmin.nfcCardTypes.index');
-        Route::get('/nfcCardTypes', [App\Http\Controllers\NfcCardTypesController::class, 'index'])->name('sadmin.nfcCardTypes.index');
-        
-        Route::get('/nfcCardTypes/nfcCardOrders', [App\Http\Controllers\NfcCardTypesController::class, 'NfcCardOrder'])->name('sadmin.nfcCardTypes.nfcCardOrders.index');
+        Route::get('/nfcCardTypes', [NfcCardTypesController::class, 'index'])->name('sadmin.nfcCardTypes.index');
+        Route::get('/nfcCardTypes/nfcCardOrders', [NfcCardTypesController::class, 'NfcCardOrder'])->name('sadmin.nfcCardTypes.nfcCardOrders.index');
 
 
 

@@ -18,7 +18,7 @@ class NfcOrdersTable extends LivewireTableComponent
 
     protected $listeners = ['refresh' => '$refresh', 'resetPageTable'];
 
-    protected string $pageName = 'nfcOrders-table';
+    protected string $pageName = 'nfc-orders-table';
 
     public function query(): Builder
     {
@@ -56,19 +56,8 @@ class NfcOrdersTable extends LivewireTableComponent
                 Column::make(__('messages.subscription.start_date'), 'starts_at')
                 ->sortable(),
                 Column::make(__('messages.common.action'))->addClass('justify-content-center d-flex'),
-            // Column::make(__('NFC CARD TYPE'), 'nfc_card_type')
-            //     ->sortable()->searchable()->addClass('d-flex justify-content-end'),
-            // Column::make(__('VCARD NAME'), 'vcard_name')
-            //     ->sortable()->searchable()->addClass('duration-center'),
-            // Column::make(__('ORDER STATUS'), 'order_status')
-            //     ->sortable()->searchable()->addClass('duration-center'),
-            //     Column::make(__('PAYMENT STATUS'), 'payment_status')
-            //     ->sortable()->searchable()->addClass('duration-center'),
-            //     Column::make(__('CREATED AT'), 'created_at')
-            //     ->sortable()->searchable()->addClass('duration-center'),
-            // Column::make(__('messages.common.action'))->addClass('w-100px justify-content-center d-flex'),
-            
         ];
+
     }
 
     public function rowView(): string
@@ -76,7 +65,7 @@ class NfcOrdersTable extends LivewireTableComponent
         return 'livewire-tables.rows.nfcOrders_table';
     }
 
-    public function resetPageTable($pageName = 'nfcOrders-table')
+    public function resetPageTable($pageName = 'nfc-orders-table')
     {
         $this->customResetPage($pageName);
     }

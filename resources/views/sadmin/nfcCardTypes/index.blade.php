@@ -7,7 +7,7 @@
     <div class="container-fluid">
         <div class="d-flex flex-column table-striped">
             @include('flash::message')
-            <livewire:nfctypes-table/>
+            <livewire:nfc-types-table/>
         </div>
     </div>
     
