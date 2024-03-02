@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\CreateProductRequest;
 use App\Http\Requests\UpdateProductRequest;
 use App\Models\Product;
+use App\Models\sub_product;
 use App\Repositories\VcardProductRepository;
 
 class ProductController extends AppBaseController
@@ -80,4 +81,7 @@ class ProductController extends AppBaseController
 
         return $this->sendResponse($service, __('messages.flash.update_product'));
     }
+
+  
+    
 }

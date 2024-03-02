@@ -11,6 +11,7 @@ use App\Models\FrontTestimonial;
 use App\Models\Meta;
 use App\Models\Plan;
 use App\Models\Setting;
+use App\Models\SubscriptionProduct; // Add this line
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Contracts\View\View;
@@ -19,6 +20,8 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Redirector;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Log;
+
 
 class HomeController extends AppBaseController
 {
@@ -35,6 +38,9 @@ class HomeController extends AppBaseController
             $metas = $metas->toArray();
         }
 
+        //Log::info('Retrieved ' . $testimonials->count() . ' subscription products.');
+
+
         $setting = Setting::pluck('value', 'key')->toArray();
 
         $aboutUS = AboutUs::with('media')->get()->toArray();
@@ -43,7 +49,9 @@ class HomeController extends AppBaseController
 
         $plans = Plan::with(['currency', 'planFeature', 'hasZeroPlan'])->get();
 
-        $view = getSuperAdminSettingValue('is_front_page') ? view('front.home.home', compact('plans', 'setting', 'features', 'testimonials', 'aboutUS', 'metas')) : redirect(route('login'));
+        $subscriptionProducts = SubscriptionProduct::all(); // Fetch subscription products
+
+        $view = getSuperAdminSettingValue('is_front_page') ? view('front.home.home', compact('plans', 'setting', 'features', 'testimonials', 'aboutUS', 'metas', 'subscriptionProducts')) : redirect(route('login'));
 
         return  $view;
     }

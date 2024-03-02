@@ -103,7 +103,8 @@
                         <div class="col-lg-6 col-md-12 col-12">
                             <div class="product-details ps-lg-4">
                                 <div class="mb-3"><span class="product-availability">In Stock</span></div>
-                                <h2 class="product-title mb-3">Accesories Lather bag</h2>
+                                   <h2 class="product-title mb-3">product</h2>
+
                                 <div class="product-rating d-flex align-items-center mb-3">
                                     <span class="star-rating">
                                         <svg width="16" height="15" viewBox="0 0 16 15" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -475,6 +476,13 @@
                 </div>
             </div>
             <!-- product tab end -->
+
+
+
+
+
+
+            
             
             <!-- you may also like start -->
             <div class="featured-collection-section mt-100 home-section overflow-hidden">

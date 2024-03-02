@@ -24,8 +24,10 @@ use App\Http\Controllers\RazorpayController;
 use App\Http\Controllers\ScheduleAppointmentController;
 use App\Http\Controllers\SettingController;
 use App\Http\Controllers\SocialAuthController;
+use App\Http\Controllers\SubscriptionProductController;
 use App\Http\Controllers\StateController;
 use App\Http\Controllers\StripeController;
+use App\Http\Controllers\Sub_ProductController;
 use App\Http\Controllers\SubscriptionController;
 use App\Http\Controllers\TestimonialController;
 use App\Http\Controllers\UserController;
@@ -74,6 +76,12 @@ Route::get('/product', function () {
     return view('front.home.product');
 });
 
+// Route::get('/product', function () {
+//     return view('front.home.subproduct');
+// });
+
+
+
 Route::get('/404', function () {
     return view('front.home.404');
 });
@@ -98,6 +106,25 @@ Route::get('/', function () {
     return (! Auth::check()) ? \redirect(route('login')) : Redirect::to('/');
 });
 
+
+
+
+//subscription products
+// Add routes for SubscriptionProductController
+Route::get('/', [SubscriptionProductController::class, 'index'])->name('products.index');
+Route::get('/SubscriptionProduct/create', [SubscriptionProductController::class, 'create'])->name('products.create');
+Route::post('/SubscriptionProduct', [SubscriptionProductController::class, 'store'])->name('products.store');
+Route::get('/SubscriptionProduct/{id}', [SubscriptionProductController::class, 'show'])->name('products.show');
+Route::get('/SubscriptionProduct/{id}/edit', [SubscriptionProductController::class, 'edit'])->name('products.edit');
+Route::put('/SubscriptionProduct/{id}', [SubscriptionProductController::class, 'update'])->name('products.update');
+Route::delete('/products/{id}', [SubscriptionProductController::class, 'destroy'])->name('products.destroy');
+
+// Route::get('/subscription-products', [SubscriptionProductController::class, 'index'])->name('subscription.products.index');
+// Route::get('/SubscriptionProduct/{id}', [SubscriptionProductController::class, 'show'])->name('products.show');
+
+
+
+
 //social logins
 Route::get('/login/{provider}', [SocialAuthController::class, 'redirectToSocial'])->name('social.login');
 Route::get('/login/{provider}/callback', [SocialAuthController::class, 'handleSocialCallback']);
@@ -109,6 +136,7 @@ Route::middleware('setLanguage')->group(function () {
     Route::get('terms-conditions', [HomeController::class, 'termCondition'])->name('terms.conditions');
     Route::get('privacy-policy', [HomeController::class, 'privacyPolicy'])->name('privacy.policy');
     Route::post('/email-sub', [EmailSubscriptionController::class, 'store'])->name('email.sub');
+
 });
 Route::middleware('auth', 'valid.user', 'xss')->group(function () {
     // Update profile
