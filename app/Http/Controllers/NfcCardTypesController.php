@@ -15,5 +15,11 @@ class NfcCardTypesController extends Controller
     {
         return view('sadmin.nfcCardTypes.nfcCardOrders.index');
     }
+
+    public function create()
+    {
+        return view('sadmin.nfcCardTypes.create');
+    }
+
 }
 

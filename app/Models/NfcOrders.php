@@ -67,7 +67,7 @@ class NfcOrders extends Model
         // 'frequency',
         // 'is_default',
         // 'trial_days',
-        // 'no_of_vcards',
+        // 'no_of_vcards',F
     ];
 
     protected $casts = [

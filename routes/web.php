@@ -15,6 +15,8 @@ use App\Http\Controllers\FeatureController;
 use App\Http\Controllers\FrontTestimonialController;
 use App\Http\Controllers\GalleryController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ShopController;
+use App\Http\Controllers\SingleProductController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\PaypalController;
 use App\Http\Controllers\PaypalPayoutController;
@@ -57,9 +59,16 @@ use Rap2hpoutre\LaravelLogViewer\LogViewerController;
 //    return (!Auth::check()) ? \redirect(route('login')) : Redirect::to(getDashboardURL());
 //});
 
-Route::get('/shop', function () {
-    return view('front.home.shop');
-});
+// Route::get('/shop', function () {
+//     return view('front.home.shop');
+// });
+
+
+Route::get('/', [HomeController::class, 'index'])->name('home');
+//Route::get('/shop',[ShopController::class,'front.home.shop'])->name('shop');
+Route::get('/shop', [ShopController::class, 'shop'])->name('front.home.shop');
+Route::get('/product', [SingleProductController::class, 'singleproduct'])->name('front.home.product');
+
 
 Route::get('/blog', function () {
     return view('front.home.blog');
@@ -73,15 +82,11 @@ Route::get('/my-account', function () {
     return view('front.home.my-account');
 });
 
-Route::get('/product', function () {
-    return view('front.home.product');
-});
+
 
 // Route::get('/product', function () {
 //     return view('front.home.subproduct');
 // });
-
-
 
 Route::get('/404', function () {
     return view('front.home.404');
@@ -112,13 +117,13 @@ Route::get('/', function () {
 
 //subscription products
 // Add routes for SubscriptionProductController
-Route::get('/', [SubscriptionProductController::class, 'index'])->name('products.index');
-Route::get('/SubscriptionProduct/create', [SubscriptionProductController::class, 'create'])->name('products.create');
-Route::post('/SubscriptionProduct', [SubscriptionProductController::class, 'store'])->name('products.store');
-Route::get('/SubscriptionProduct/{id}', [SubscriptionProductController::class, 'show'])->name('products.show');
-Route::get('/SubscriptionProduct/{id}/edit', [SubscriptionProductController::class, 'edit'])->name('products.edit');
-Route::put('/SubscriptionProduct/{id}', [SubscriptionProductController::class, 'update'])->name('products.update');
-Route::delete('/products/{id}', [SubscriptionProductController::class, 'destroy'])->name('products.destroy');
+// Route::get('/', [SubscriptionProductController::class, 'index'])->name('products.index');
+// Route::get('/SubscriptionProduct/create', [SubscriptionProductController::class, 'create'])->name('products.create');
+// Route::post('/SubscriptionProduct', [SubscriptionProductController::class, 'store'])->name('products.store');
+// Route::get('/SubscriptionProduct/{id}', [SubscriptionProductController::class, 'show'])->name('products.show');
+// Route::get('/SubscriptionProduct/{id}/edit', [SubscriptionProductController::class, 'edit'])->name('products.edit');
+// Route::put('/SubscriptionProduct/{id}', [SubscriptionProductController::class, 'update'])->name('products.update');
+// Route::delete('/products/{id}', [SubscriptionProductController::class, 'destroy'])->name('products.destroy');
 
 // Route::get('/subscription-products', [SubscriptionProductController::class, 'index'])->name('subscription.products.index');
 // Route::get('/SubscriptionProduct/{id}', [SubscriptionProductController::class, 'show'])->name('products.show');
@@ -133,6 +138,7 @@ Route::get('/login/{provider}/callback', [SocialAuthController::class, 'handleSo
 Route::middleware('setLanguage')->group(function () {
     Route::post('/change-language', [HomeController::class, 'changeLanguage']);
     Route::get('/', [HomeController::class, 'index'])->name('home');
+    
     Route::get('cookie', [HomeController::class, 'declineCookie'])->name('declineCookie');
     Route::get('terms-conditions', [HomeController::class, 'termCondition'])->name('terms.conditions');
     Route::get('privacy-policy', [HomeController::class, 'privacyPolicy'])->name('privacy.policy');
@@ -307,8 +313,16 @@ Route::middleware('auth', 'valid.user', 'xss')->group(function () {
 
         //nfc-card-types
         Route::get('/nfcCardTypes', [NfcCardTypesController::class, 'index'])->name('sadmin.nfcCardTypes.index');
+        Route::get('/nfcCardTypes/create', [NfcCardTypesController::class, 'create'])->name('sadmin.nfcCardTypes.create');
+       
+        //sell NFC card 
         Route::get('/nfcCardTypes/nfcCardOrders', [NfcCardTypesController::class, 'NfcCardOrder'])->name('sadmin.nfcCardTypes.nfcCardOrders.index');
+        Route::post('/products', [SubscriptionProductController::class, 'store'])->name('products.store');
+        Route::get('/products/{product}/edit', [SubscriptionProductController::class, 'edit'])->name('products.edit');
+        Route::put('/products/{product}', [SubscriptionProductController::class, 'update'])->name('products.update');
+        Route::delete('/products/{product}', [SubscriptionProductController::class, 'destroy'])->name('products.destroy');
 
+   
 
 
         //affiliate Users

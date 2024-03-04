@@ -9,7 +9,7 @@
     <!-- Add these lines to include Slick slider files -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.4.1/slick.css"/>
 
-
+    
 
     @if(!empty($metas))
         @if($metas['meta_description'])

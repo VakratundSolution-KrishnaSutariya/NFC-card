@@ -49,6 +49,7 @@ class HomeController extends AppBaseController
 
         $plans = Plan::with(['currency', 'planFeature', 'hasZeroPlan'])->get();
 
+    
         $subscriptionProducts = SubscriptionProduct::all(); // Fetch subscription products
 
         $view = getSuperAdminSettingValue('is_front_page') ? view('front.home.home', compact('plans', 'setting', 'features', 'testimonials', 'aboutUS', 'metas', 'subscriptionProducts')) : redirect(route('login'));

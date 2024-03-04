@@ -29,6 +29,9 @@ class SubscriptionProduct extends Model
         'product_color' => 'array',
     ];
 
-    
     protected $table = 'subscription_products';
+
+
+    //new 03/03/24
+    
 }

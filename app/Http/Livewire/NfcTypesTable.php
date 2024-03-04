@@ -2,7 +2,7 @@
 
 namespace App\Http\Livewire;
 
-use App\Models\NfcTypes;
+use App\Models\SubscriptionProduct;
 use Illuminate\Database\Eloquent\Builder;
 use Rappasoft\LaravelLivewireTables\Views\Column;
 
@@ -16,9 +16,11 @@ class NfcTypesTable extends LivewireTableComponent
 
     protected string $pageName = 'nfc-types-table';
 
-    public string $defaultSortColumn = 'name';
+    public string $defaultSortColumn = 'product_title';
 
     public string $defaultSortDirection = 'desc';
+
+
 
     public function render()
     {
@@ -36,18 +38,20 @@ class NfcTypesTable extends LivewireTableComponent
     }
 
     public function columns(): array
-    {
-        return [
-            Column::make(__('messages.common.name'), 'name')->sortable()->searchable()->addClass('col-4'),
-            Column::make(__('ORDERS COUNT'), 'orders_count')->sortable()->searchable()->addClass('col-4'),
-            Column::make(__('PRICE'), 'price')->sortable()->searchable()->addClass('col-4'),
-            Column::make(__('messages.common.action'))->addClass('w-150px justify-content-center d-flex'),
-        ];
-    }
+{
+    return [
+        Column::make(__('messages.common.name'), 'product_title')->sortable()->searchable()->addClass('col-4'),
+        Column::make(__('PRODUCT QUANTITY'), 'product_quantity')->sortable()->searchable()->addClass('col-4'),
+        Column::make(__('PRICE'), 'product_price')->sortable()->searchable()->addClass('col-4'),
+        Column::make(__('messages.common.action'))->addClass('w-150px justify-content-center d-flex'),
+
+    ];
+}
+
 
     public function query(): Builder
     {
-       return NfcTypes::query();
+        return SubscriptionProduct::query();
     }
 
     public function rowView(): string

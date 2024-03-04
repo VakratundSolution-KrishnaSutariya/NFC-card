@@ -1,1 +1,0 @@
-<?php /**PATH C:\xampp\htdocs\Nfc-vcard\resources\views/vendor/livewire-tables/stubs/modals.blade.php ENDPATH**/ ?>

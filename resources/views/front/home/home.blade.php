@@ -196,9 +196,8 @@
                         <div class="col-lg-3 col-md-6 col-6" data-aos="fade-up" data-aos-duration="700">
                             <div class="product-card">
                                 <div class="product-card-img">
-                                    <a class="hover-switch" href="{{ url('shop/'.$subscriptionProduct->id) }}">
+                                    <a class="hover-switch" href="{{ url('product/'.$subscriptionProduct->id) }}">
                                         <img class="primary-img" src="{{ asset($subscriptionProduct->product_thumb_image) }}" alt="product-img">
-                                    
                                     </a>
                                     <div class="product-badge">
                                         <span class="badge-label badge-percentage rounded">-{{ $subscriptionProduct->product_price_percentage_discount }}%</span>
@@ -237,6 +236,10 @@
     </div>
 </section>
 <!-- End features section -->
+
+
+
+
 
 
 
